@@ -23,7 +23,7 @@ export default function SibalLandingPage() {
         <div className="bg-blue-50 border border-blue-200 rounded p-4 mb-8">
           <h3 className="font-semibold text-lg mb-2">Esemény információk</h3>
           <p>
-            Ezennel meginvitálunk az I. Hagyományteremtő Szezonnyitó Síbálon! Ez a rendezvény 
+            Tisztelettel invitáljuk az I. Hagyományteremtő Szezonnyitó Síbálra! A rendezvény 
             tökéletes alkalom arra, hogy felkészüljünk az előttünk álló síszezonra, 
             találkozzunk régi barátokkal és új ismeretségeket kössünk a síelés szerelmeseivel.
           </p>
