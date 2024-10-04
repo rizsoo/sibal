@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { CalendarIcon, MapPinIcon } from 'lucide-react'
+import gallery from '../images/terem.jpg'
 
 export default function SibalLandingPage() {
   return (
@@ -19,25 +20,25 @@ export default function SibalLandingPage() {
             <p>Schieszl Vendéglő és Borház (2011 Budakalász, Budai út 83.)</p>
           </div>
         </div>
-
         <div className="bg-blue-50 border border-blue-200 rounded p-4 mb-8">
           <h3 className="font-semibold text-lg mb-2">Esemény információk</h3>
           <p>
-            Csatlakozz hozzánk az I. Hagyományteremtő Szezonnyitó Síbálon! Ez a rendezvény 
+            Ezennel meginvitálunk az I. Hagyományteremtő Szezonnyitó Síbálon! Ez a rendezvény 
             tökéletes alkalom arra, hogy felkészüljünk az előttünk álló síszezonra, 
             találkozzunk régi barátokkal és új ismeretségeket kössünk a síelés szerelmeseivel.
           </p>
         </div>
 
+        <img src={gallery}  style={{maxHeight: "300px", width: "100%", objectFit: "cover", marginBottom: "30px"}}/>
         <div className="text-center">
           <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
-            Regisztráció
+            Regisztráció hamarosan
           </button>
         </div>
       </main>
 
       <footer className="mt-8 text-center text-sm text-blue-600">
-        © 2024 Síbál Szervezők. Minden jog fenntartva.
+        © 2024 Lavina-Sport Kft. Minden jog fenntartva.
       </footer>
     </div>
   )
