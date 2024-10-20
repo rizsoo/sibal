@@ -62,9 +62,8 @@ const SibalWebsite = () => {
       <nav className="sticky top-0 bg-[#327bab] shadow-md z-10 w-full">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <div className="w-40 h-10 bg-white rounded-md">
-              {/* Placeholder for logo */}
-              <div className="w-full h-full flex items-center justify-center text-[#327bab]"> TESZTOLDAL - SÍBÁL 2024</div>
+            <div className="">
+              <h1 className="w-full h-full flex items-center justify-center text-white text-3xl font-bold">SÍBÁL 2024</h1>
             </div>
             <div className="hidden md:flex justify-end items-center space-x-4">
               {navItems.map((item) => (
@@ -114,22 +113,23 @@ const SibalWebsite = () => {
 
       <div className="max-w-[1000px] mx-auto">
         <main className="container mx-auto px-4 py-8">
-          <div className="flex justify-center mb-8">
-            <div className="w-32 h-32 bg-white rounded-full shadow-md flex items-center justify-center">
-              {/* Logo */}
-              <img src={logo} />
-            </div>
-            AZ ALÁBBI TARTALOM VÁZLAT, ÍGY NEM VÉGLEGES!
-          </div>
 
           <section id="esemeny" ref={sectionRefs.esemeny} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Esemény</h2>
+          <div className="flex justify-top mb-8">
+            <div>
             <p className="mb-4">
               Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot, 2024. november 30-án, szombaton életre hívja a remélhetőleg valóban Hagyományteremtő Síbált, melyre Önt szeretettel várjuk.
             </p>
             <p>
               A gálavacsora és bál kiemelt célja a szabadidő,- és a hazai versenysportbarátok közös találkozója. Fontos az értékteremtés, régi kapcsolatok felélesztése, egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai sítársadalom valamiféle összefogása az elsődleges cél.
             </p>
+            </div>
+            <div className="w-100 h-100 pl-4 pr-4 ml-6 bg-white rounded-full flex items-baseline justify-center">
+              {/* Logo */}
+              <img src={logo} />
+            </div>
+          </div>
           </section>
 
           <section id="helyszin" ref={sectionRefs.helyszin} className="mb-12 bg-white rounded-lg shadow-md p-6">
@@ -189,8 +189,8 @@ const SibalWebsite = () => {
                     <span>Schieszl Vendéglő és Borház</span>
                   </li>
                 </ul>
-                <h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Fővédnök</h3>
-                <p>Szijjártó Péter külgazdasági és külügyminisztere</p>
+                {/*<h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Fővédnök</h3>
+                <p>Szijjártó Péter külgazdasági és külügyminisztere</p>*/}
                 <h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Házigazdák</h3>
                 <p>Schieszl Vendéglő és Borház és Lavina-Sport Kft.</p>
                 <h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Szakmai partnerek</h3>
@@ -242,15 +242,14 @@ const SibalWebsite = () => {
                 { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/" },
                 { name: "Csáki-Maronyák Éva festőművész", url: "#" },
                 { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu" },
-                { name: "Szlovák Turisztikai Képviselet", url: "https://slovakia.travel/hu" },
                 { name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu" },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/" },
-                { name: "Schiller Autó Család", url: "https://www.schillerauto.hu/" },
-                { name: "Volvo", url: "https://www.volvocars.com/hu" },
-                { name: "BYD", url: "https://www.byd.com/hu" },
+                //{ name: "Schiller Autó Család", url: "https://www.schillerauto.hu/" },
+                //{ name: "Volvo", url: "https://www.volvocars.com/hu" },
+                //{ name: "BYD", url: "https://www.byd.com/hu" },
                 { name: "Síelők.hu", url: "https://sielok.hu/" },
                 { name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/" },
-                { name: "Zsindelyes Vendéglő Dobogókő", url: "https://zsindelyesvendeglodobogoko.hu/" },
+                //{ name: "Zsindelyes Vendéglő Dobogókő", url: "https://zsindelyesvendeglodobogoko.hu/" },
                 { name: "Nagyvillám Visegrádi sípálya", url: "https://nagyvillam.hu/" }
               ].map((partner, index) => (
                 <a
@@ -269,8 +268,9 @@ const SibalWebsite = () => {
           <section id="arak" ref={sectionRefs.arak} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-6 text-[#327bab] text-center">Árak</h2>
             <div className="bg-[#8ab5dc] text-white rounded-lg p-8 shadow-lg">
-              <p className="text-4xl font-bold mb-4 text-center">38.000,- Ft</p>
-              <p className="text-xl mb-6 text-center">Gálavacsora és bálbelépő</p>
+              <p className="text-4xl font-bold mb-2 text-center">38.000 Ft</p>
+              <p className="mb-3 text-center text-sm text-white-600">(Az ár tartalmazza az áfát)</p>
+              <p className="text-xl mb-6 text-center">Gálavacsora és bálbelépő az alábbiakat tartalmazza</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center justify-center">
                   <Gift className="mr-2" size={24} />
@@ -286,7 +286,54 @@ const SibalWebsite = () => {
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-center text-sm text-gray-600">(Az étlapot külön feltüntetjük)</p>
+            <div className="bg-white rounded-lg p-6">
+              <h3 className="text-2xl font-bold mb-4 text-[#327bab]">Menü</h3>
+              
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Vendégvárás:</h4>
+                <p className="font-medium">Liget program (Időtartam: kb. 60 perc)</p>
+                <ul className="list-disc list-inside ml-4 mb-2">
+                  <li>9 hónapig érlelt mangalica sonka</li>
+                  <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
+                  <li>Friss házi kenyér</li>
+                </ul>
+                <p>(Berkel-sonka szeletelő látványelemként)</p>
+                <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Büfévacsora</h4>
+                <h5 className="text-lg font-medium mb-1">Leves</h5>
+                <ul className="list-disc list-inside ml-4 mb-2">
+                  <li>Halászlé, pontyhússal</li>
+                  <li>Vegán és minden mentes édesburgonya krémleves</li>
+                </ul>
+
+                <h5 className="text-lg font-medium mb-1">Főételek</h5>
+                <ul className="list-disc list-inside ml-4 mb-2">
+                  <li>Rántott tengeri süllőfilé, pirított petrezselymes rák, fokhagymás aioli</li>
+                  <li>Kacsamell falatok, körte, kéksajt</li>
+                  <li>Nógrádi szarvaspörkölt, sült szilva</li>
+                  <li>Préselt egész csirke</li>
+                  <li>Vegán töltött sütőtök zöldségekkel, tofu, narancsos lencse</li>
+                  <li>Héjas, zöldfűszeres burgonya, rakott spätzle, zöldséges Jázmin rizs</li>
+                </ul>
+
+                <h5 className="text-lg font-medium mb-1">Desszertek</h5>
+                <ul className="list-disc list-inside ml-4 mb-2">
+                  <li>Mákos-almás lepény, málnalekvár</li>
+                  <li>Csokoládé láva</li>
+                  <li>Bögrés süti aszalt gyümölcsökkel, maracujás öntettel</li>
+                  <li>Kávé és mascarpone, mandularopogós (pohárkrém)</li>
+                  <li>Málnás tápióka puding</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Italcsomag:</h4>
+                <p>Korlátlan italfogyasztás 18.00-01.00 időtartamra, mely a röviditalt nem tartalmazza. (szénsavas és rostos üdítő italok, szénsavas és mentes ásványvíz, standard fehér, rosé és vörösborok, alkoholos és mentes sör, kávé, capuccino).</p>
+              </div>
+            </div>
           </section>
 
           <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-6">
