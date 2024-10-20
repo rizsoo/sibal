@@ -119,7 +119,7 @@ const SibalWebsite = () => {
           <div className="flex justify-top mb-8">
             <div>
             <p className="mb-4">
-              Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot, 2024. november 30-án, szombaton életre hívja a remélhetőleg valóban Hagyományteremtő Síbált, melyre Önt szeretettel várjuk.
+              Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot, 2024. november 30-án, szombaton életre hívja a remélhetőleg valóban Hagyományteremtő Szezonnyitó Síbált, melyre Önt szeretettel várjuk.
             </p>
             <p>
               A gálavacsora és bál kiemelt célja a szabadidő,- és a hazai versenysportbarátok közös találkozója. Fontos az értékteremtés, régi kapcsolatok felélesztése, egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai sítársadalom valamiféle összefogása az elsődleges cél.
@@ -127,7 +127,7 @@ const SibalWebsite = () => {
             </div>
             <div className="w-100 h-100 pl-4 pr-4 ml-6 bg-white rounded-full flex items-baseline justify-center">
               {/* Logo */}
-              <img src={logo} />
+              <img src={logo} alt="Síbál 2024 Logo" />
             </div>
           </div>
           </section>
@@ -155,15 +155,15 @@ const SibalWebsite = () => {
                 <div className="bg-[#5091cb] text-white p-4 rounded-lg">
                   <h4 className="font-semibold mb-2">Térkép</h4>
                   <div className="aspect-w-16 aspect-h-9">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.5802290113123!2d19.047555776676736!3d47.61741088918466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d9e8a9e0e3f1%3A0x4b0a5e2c55f8e4d0!2sSchieszl%20Vend%C3%A9gl%C5%91%20%C3%A9s%20Borh%C3%A1z!5e0!3m2!1sen!2sus!4v1698252891027!5m2!1sen!2sus"
-                      width="100%"
-                      height="300"
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5378.897149828747!2d19.047556!3d47.617411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d771640910df%3A0x6f30246b78c03cec!2zU2NoaWVzemwgVmVuZMOpZ2zFkSDDqXMgQm9yaMOheg!5e0!3m2!1sen!2sus!4v1729422098505!5m2!1sen!2sus" 
+                      width="100%" 
+                      height="300" 
                       style={{ border: 0 }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                      allowFullScreen="" 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade">
+                    </iframe>
                   </div>
                 </div>
               </div>
@@ -172,59 +172,91 @@ const SibalWebsite = () => {
 
           <section id="program" ref={sectionRefs.program} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-6 text-[#327bab] text-center">Program</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-[#5091cb]">Főbb Információk</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <Calendar className="text-[#5091cb] mr-2" size={20} />
-                    <span>2024. november 30. szombat</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Clock className="text-[#5091cb] mr-2" size={20} />
-                    <span>18:00 - 01:00</span>
-                  </li>
-                  <li className="flex items-center">
-                    <MapPin className="text-[#5091cb] mr-2" size={20} />
-                    <span>Schieszl Vendéglő és Borház</span>
-                  </li>
-                </ul>
-                {/*<h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Fővédnök</h3>
-                <p>Szijjártó Péter külgazdasági és külügyminisztere</p>*/}
-                <h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Házigazdák</h3>
-                <p>Schieszl Vendéglő és Borház és Lavina-Sport Kft.</p>
-                <h3 className="text-xl font-semibold mt-6 mb-4 text-[#5091cb]">Szakmai partnerek</h3>
-                <ul className="list-disc list-inside">
-                  <li>Magyar Sí Szövetség</li>
-                  <li>Síoktatók Magyarországi Szövetsége</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-[#5091cb]">Időrend</h3>
-                <div className="space-y-4">
+            <div className="grid grid-cols-1 gap-8">
+
+              <div className="bg-white rounded-lg p-6">
+                <h3 className="text-2xl font-bold mb-4 text-[#327bab] bg-[#ebf2f9] p-3 rounded-lg">Időrend</h3>
+                <div className=" grid grid-cols-2 gap-8">
                   {[
-                    { time: "18:00", event: "Kapunyitás", icon: <Calendar size={20} /> },
-                    { time: "18:00 - 18:50", event: "Pezsgős fogadás", icon: <Wine size={20} /> },
-                    { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <Music size={20} /> },
-                    { time: "19:00 - 19:30", event: "Vendégek köszöntője", icon: <Music size={20} /> },
-                    { time: "19:30 - 21:00", event: "Díszvacsora", icon: <Wine size={20} /> },
-                    { time: "22:10 - 22:30", event: "Műsor (díjátadók...)", icon: <Gift size={20} /> },
-                    { time: "22:30 - 23:00", event: "Tombola", icon: <Gift size={20} /> },
-                    { time: "23:00", event: "Táncmulatság", icon: <Music size={20} /> },
-                    { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös szezon megnyitása", icon: <Calendar size={20} /> },
-                    { time: "01:00", event: "Bál zárása", icon: <Clock size={20} /> },
+                    { time: "18:00", event: "Kapunyitás", icon: <Calendar size={24} /> },
+                    { time: "18:00 - 18:50", event: "Fogadás - Liget program", icon: <Wine size={24} /> },
+                    { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <Music size={24} /> },
+                    { time: "19:00 - 19:30", event: "Vendégek köszöntője", icon: <Music size={24} /> },
+                    { time: "19:30 - 21:00", event: "Díszvacsora", icon: <Wine size={24} /> },
+                    { time: "22:10 - 22:30", event: "Műsor (díjátadók...)", icon: <Gift size={24} /> },
+                    { time: "22:30 - 23:00", event: "Tombola", icon: <Gift size={24} /> },
+                    { time: "23:00", event: "Táncmulatság", icon: <Music size={24} /> },
+                    { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös szezon megnyitása", icon: <Calendar size={24} /> },
+                    { time: "01:00", event: "Bál zárása", icon: <Clock size={24} /> },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="bg-[#5091cb] text-white p-2 rounded-full mr-4">
+                      <div className="bg-[#5091cb] text-white p-3 rounded-full mr-4">
                         {item.icon}
                       </div>
                       <div>
-                        <p className="font-semibold">{item.time}</p>
-                        <p>{item.event}</p>
+                        <p className="font-semibold text-lg">{item.time}</p>
+                        <p className="text-gray-600">{item.event}</p>
                       </div>
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-6">
+                <h3 className="text-2xl font-bold mb-4 text-[#327bab] bg-[#ebf2f9] p-3 rounded-lg">Menü</h3>
+                <div className="text-sm text-center">
+                  <div className="mb-6">
+                    <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Vendégvárás:</h4>
+                    <p className="font-medium">Liget program (Időtartam: kb. 60 perc)</p>
+                    <ul className="list-disc list-inside ml-4 mb-2">
+                      <li>9 hónapig érlelt mangalica sonka</li>
+                      <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
+                      <li>Friss házi kenyér</li>
+                    </ul>
+                    <p>(Berkel-sonka szeletelő látványelemként)</p>
+                    <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Büfévacsora</h4>
+                    <h5 className="text-lg font-medium mb-1">Leves</h5>
+                    <ul className="list-disc list-inside ml-4 mb-2">
+                      <li>Halászlé, pontyhússal</li>
+                      <li>Vegán és minden mentes édesburgonya krémleves</li>
+                    </ul>
+
+                    <h5 className="text-lg font-medium mb-1">Főételek</h5>
+                    <ul className="list-disc list-inside ml-4 mb-2">
+                      <li>Rántott tengeri süllőfilé, pirított petrezselymes rák, fokhagymás aioli</li>
+                      <li>Kacsamell falatok, körte, kéksajt</li>
+                      <li>Nógrádi szarvaspörkölt, sült szilva</li>
+                      <li>Préselt egész csirke</li>
+                      <li>Vegán töltött sütőtök zöldségekkel, tofu, narancsos lencse</li>
+
+                      <li>Héjas, zöldfűszeres burgonya, rakott spätzle, zöldséges Jázmin rizs</li>
+                    </ul>
+
+                    <h5 className="text-lg font-medium mb-1">Desszertek</h5>
+                    <ul className="list-disc list-inside ml-4 mb-2">
+                      <li>Mákos-almás lepény, málnalekvár</li>
+                      <li>Csokoládé láva</li>
+                      <li>Bögrés süti aszalt gyümölcsökkel, maracujás öntettel</li>
+                      <li>Kávé és mascarpone, mandularopogós (pohárkrém)</li>
+                      <li>Málnás tápióka puding</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Italcsomag:</h4>
+                    <p>Korlátlan italfogyasztás 18.00-01.00 időtartamra, mely a röviditalt nem tartalmazza. (szénsavas és rostos üdítő italok, szénsavas és mentes ásványvíz, standard fehér, rosé és vörösborok, alkoholos és mentes sör, kávé, capuccino).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-6">
+                <h3 className="text-2xl font-bold mb-4 text-[#327bab] bg-[#ebf2f9] p-3 rounded-lg">Tombola</h3>
+                <p>A bálbelépő ára tartalmaz 1 darab tombolaszelvényt.</p>
+                <p>A tombola 8-10 nagy értékű (100.000,-forint körüli) nyeremény, összesen 1 millió forint értékben.</p>
               </div>
             </div>
           </section>
@@ -244,12 +276,8 @@ const SibalWebsite = () => {
                 { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu" },
                 { name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu" },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/" },
-                //{ name: "Schiller Autó Család", url: "https://www.schillerauto.hu/" },
-                //{ name: "Volvo", url: "https://www.volvocars.com/hu" },
-                //{ name: "BYD", url: "https://www.byd.com/hu" },
                 { name: "Síelők.hu", url: "https://sielok.hu/" },
                 { name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/" },
-                //{ name: "Zsindelyes Vendéglő Dobogókő", url: "https://zsindelyesvendeglodobogoko.hu/" },
                 { name: "Nagyvillám Visegrádi sípálya", url: "https://nagyvillam.hu/" }
               ].map((partner, index) => (
                 <a
@@ -263,13 +291,14 @@ const SibalWebsite = () => {
                 </a>
               ))}
             </div>
+              <p className="mt-6 text-center text-xs text-gray-600">Szeretne a támogatónk lenni? Írjon az info@skioutlet.hu -ra!</p>
           </section>
 
           <section id="arak" ref={sectionRefs.arak} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-6 text-[#327bab] text-center">Árak</h2>
             <div className="bg-[#8ab5dc] text-white rounded-lg p-8 shadow-lg">
               <p className="text-4xl font-bold mb-2 text-center">38.000 Ft</p>
-              <p className="mb-3 text-center text-sm text-white-600">(Az ár tartalmazza az áfát)</p>
+              <p className="mb-3 text-center text-sm text-white-600">(Az ár tartalmazza az ÁFA-t)</p>
               <p className="text-xl mb-6 text-center">Gálavacsora és bálbelépő az alábbiakat tartalmazza</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center justify-center">
@@ -286,58 +315,11 @@ const SibalWebsite = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg p-6">
-              <h3 className="text-2xl font-bold mb-4 text-[#327bab]">Menü</h3>
-              
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Vendégvárás:</h4>
-                <p className="font-medium">Liget program (Időtartam: kb. 60 perc)</p>
-                <ul className="list-disc list-inside ml-4 mb-2">
-                  <li>9 hónapig érlelt mangalica sonka</li>
-                  <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
-                  <li>Friss házi kenyér</li>
-                </ul>
-                <p>(Berkel-sonka szeletelő látványelemként)</p>
-                <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Büfévacsora</h4>
-                <h5 className="text-lg font-medium mb-1">Leves</h5>
-                <ul className="list-disc list-inside ml-4 mb-2">
-                  <li>Halászlé, pontyhússal</li>
-                  <li>Vegán és minden mentes édesburgonya krémleves</li>
-                </ul>
-
-                <h5 className="text-lg font-medium mb-1">Főételek</h5>
-                <ul className="list-disc list-inside ml-4 mb-2">
-                  <li>Rántott tengeri süllőfilé, pirított petrezselymes rák, fokhagymás aioli</li>
-                  <li>Kacsamell falatok, körte, kéksajt</li>
-                  <li>Nógrádi szarvaspörkölt, sült szilva</li>
-                  <li>Préselt egész csirke</li>
-                  <li>Vegán töltött sütőtök zöldségekkel, tofu, narancsos lencse</li>
-                  <li>Héjas, zöldfűszeres burgonya, rakott spätzle, zöldséges Jázmin rizs</li>
-                </ul>
-
-                <h5 className="text-lg font-medium mb-1">Desszertek</h5>
-                <ul className="list-disc list-inside ml-4 mb-2">
-                  <li>Mákos-almás lepény, málnalekvár</li>
-                  <li>Csokoládé láva</li>
-                  <li>Bögrés süti aszalt gyümölcsökkel, maracujás öntettel</li>
-                  <li>Kávé és mascarpone, mandularopogós (pohárkrém)</li>
-                  <li>Málnás tápióka puding</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold mb-2 text-[#5091cb]">Italcsomag:</h4>
-                <p>Korlátlan italfogyasztás 18.00-01.00 időtartamra, mely a röviditalt nem tartalmazza. (szénsavas és rostos üdítő italok, szénsavas és mentes ásványvíz, standard fehér, rosé és vörösborok, alkoholos és mentes sör, kávé, capuccino).</p>
-              </div>
-            </div>
           </section>
 
           <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4 text-[#327bab] text-center">Regisztráció</h2>
+            <p className="mt-4 text-center text-xs text-gray-600"> Regisztrációs határidő: 2024. november 15.</p>
             <form className="space-y-4 max-w-md mx-auto">
               <div className="grid grid-cols-1 gap-4">
                 <div>
