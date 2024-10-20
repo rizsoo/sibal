@@ -79,35 +79,8 @@ const SibalWebsite = () => {
     // In a real-world scenario, you would send this data to your server
     // which would then use the Google Sheets API to append the data
     console.log('Form submitted:', formData)
-
-      const requestBody = {
-        Action: 'Add',
-        Properties: {},
-        Rows: [
-          {
-            "name": e.name,
-            "email": e.email.toLowerCase(),
-            "phone": e.phone,
-            "billing": e.billing,
-          }
-        ]
-      };
-      try {
-        
-        const response = await fetch(
-          `https://www.appsheet.com/dbs/database/sSQQf631rO4kyo2ARhuH87?utm_source=share&utm_medium=referral&utm_campaign=databaselink`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestBody)
-          }
-        );
-        const responseData = await response.json();
-      } catch (error) {
-        console.error('Error fetching data');
-      }
+    //ADD FUNCTION
+    
   }
 
   return (
