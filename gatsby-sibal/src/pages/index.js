@@ -2,10 +2,18 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Menu, X, MapPin, Wine, Clock, Music, Gift, Calendar } from 'lucide-react'
 import logo from '../images/logo_sibal_2.png'
+import imageStanding from '../images/sibal_6.jpg'
+import imageInside from '../images/sibal_5.jpg'
 
 const SibalWebsite = () => {
   const [activeSection, setActiveSection] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    billing: ''
+  })
   const sectionRefs = {
     esemeny: useRef(null),
     helyszin: useRef(null),
@@ -56,6 +64,51 @@ const SibalWebsite = () => {
     { id: 'regisztracio', label: 'Regisztráció' },
     { id: 'kapcsolat', label: 'Kapcsolat' },
   ]
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    // In a real-world scenario, you would send this data to your server
+    // which would then use the Google Sheets API to append the data
+    console.log('Form submitted:', formData)
+
+      const requestBody = {
+        Action: 'Add',
+        Properties: {},
+        Rows: [
+          {
+            "name": e.name,
+            "email": e.email.toLowerCase(),
+            "phone": e.phone,
+            "billing": e.billing,
+          }
+        ]
+      };
+      try {
+        
+        const response = await fetch(
+          `https://www.appsheet.com/dbs/database/sSQQf631rO4kyo2ARhuH87?utm_source=share&utm_medium=referral&utm_campaign=databaselink`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+          }
+        );
+        const responseData = await response.json();
+      } catch (error) {
+        console.error('Error fetching data');
+      }
+  }
 
   return (
     <div className="min-h-screen bg-[#ebf2f9]">
@@ -176,29 +229,34 @@ const SibalWebsite = () => {
 
               <div className="bg-white rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4 text-[#327bab] bg-[#ebf2f9] p-3 rounded-lg">Időrend</h3>
-                <div className=" grid grid-cols-2 gap-8">
-                  {[
-                    { time: "18:00", event: "Kapunyitás", icon: <Calendar size={24} /> },
-                    { time: "18:00 - 18:50", event: "Fogadás - Liget program", icon: <Wine size={24} /> },
-                    { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <Music size={24} /> },
-                    { time: "19:00 - 19:30", event: "Vendégek köszöntője", icon: <Music size={24} /> },
-                    { time: "19:30 - 21:00", event: "Díszvacsora", icon: <Wine size={24} /> },
-                    { time: "22:10 - 22:30", event: "Műsor (díjátadók...)", icon: <Gift size={24} /> },
-                    { time: "22:30 - 23:00", event: "Tombola", icon: <Gift size={24} /> },
-                    { time: "23:00", event: "Táncmulatság", icon: <Music size={24} /> },
-                    { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös szezon megnyitása", icon: <Calendar size={24} /> },
-                    { time: "01:00", event: "Bál zárása", icon: <Clock size={24} /> },
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-[#5091cb] text-white p-3 rounded-full mr-4">
-                        {item.icon}
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="">
+                    {[
+                      { time: "18:00", event: "Kapunyitás", icon: <Calendar size={24} /> },
+                      { time: "18:00 - 18:50", event: "Fogadás - Liget program", icon: <Wine size={24} /> },
+                      { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <Music size={24} /> },
+                      { time: "19:00 - 19:30", event: "Vendégek köszöntője", icon: <Music size={24} /> },
+                      { time: "19:30 - 21:00", event: "Díszvacsora", icon: <Wine size={24} /> },
+                      { time: "22:10 - 22:30", event: "Műsor (díjátadók...)", icon: <Gift size={24} /> },
+                      { time: "22:30 - 23:00", event: "Tombola", icon: <Gift size={24} /> },
+                      { time: "23:00", event: "Táncmulatság", icon: <Music size={24} /> },
+                      { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös szezon megnyitása", icon: <Calendar size={24} /> },
+                      { time: "01:00", event: "Bál zárása", icon: <Clock size={24} /> },
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start mb-3">
+                        <div className="bg-[#5091cb] text-white p-3 rounded-full mr-4">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <p className="font-semibold text-lg">{item.time}</p>
+                          <p className="text-gray-600">{item.event}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="font-semibold text-lg">{item.time}</p>
-                        <p className="text-gray-600">{item.event}</p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <div className='w-100 rounded-lg'>
+                    <img className='rounded-lg' src={imageStanding} alt="Standing image" />
+                  </div>
                 </div>
               </div>
 
@@ -211,7 +269,7 @@ const SibalWebsite = () => {
                     <ul className="list-disc list-inside ml-4 mb-2">
                       <li>9 hónapig érlelt mangalica sonka</li>
                       <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
-                      <li>Friss házi kenyér</li>
+                      <li>Friss házi  kenyér</li>
                     </ul>
                     <p>(Berkel-sonka szeletelő látványelemként)</p>
                     <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
@@ -232,7 +290,6 @@ const SibalWebsite = () => {
                       <li>Nógrádi szarvaspörkölt, sült szilva</li>
                       <li>Préselt egész csirke</li>
                       <li>Vegán töltött sütőtök zöldségekkel, tofu, narancsos lencse</li>
-
                       <li>Héjas, zöldfűszeres burgonya, rakott spätzle, zöldséges Jázmin rizs</li>
                     </ul>
 
@@ -265,7 +322,7 @@ const SibalWebsite = () => {
             <h2 className="text-3xl font-bold mb-8 text-[#327bab] text-center">Támogatók és Partnerek</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {[
-                { name: "Magyar Sí Szövetség", url:  "https://www.sielok.hu/" },
+                { name: "Magyar Sí Szövetség", url:  "http://www.skihungary.hu/" },
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://www.sioktatok.hu/" },
                 { name: "Sípark Mátraszentitván", url: "https://sipark.hu/" },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/" },
@@ -317,47 +374,82 @@ const SibalWebsite = () => {
             </div>
           </section>
 
-          <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-4 text-[#327bab] text-center">Regisztráció</h2>
-            <p className="mt-4 text-center text-xs text-gray-600"> Regisztrációs határidő: 2024. november 15.</p>
-            <form className="space-y-4 max-w-md mx-auto">
-              <div className="grid grid-cols-1 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Név</label>
-                  <input type="text" id="name" name="name" required className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" />
+          <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-10 grid grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-2xl font-bold mb-4 text-[#327bab]">Regisztráció</h2>
+              <p className="mt-4 text-xs text-gray-600"> Regisztrációs határidő: 2024. november 15.</p>
+              <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+                <div className="grid grid-cols-1 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Név*</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail cím*</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefonszám</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail cím</label>
-                  <input type="email" id="email" name="email" required className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" />
+                  <label htmlFor="billing" className="block text-sm font-medium text-gray-700 mb-1">Számlázási cím (név, cím, adószám)</label>
+                  <textarea 
+                    id="billing" 
+                    name="billing" 
+                    rows={3}
+                    value={formData.billing}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out resize-none"
+                  ></textarea>
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefonszám</label>
-                  <input type="tel" id="phone" name="phone" required className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" />
+                <div className="flex justify-center">
+                  <button type="submit" className="px-4 py-2 bg-[#5091cb] text-white text-sm font-semibold rounded-md shadow-sm hover:bg-[#327bab] focus:outline-none focus:ring-2 focus:ring-[#5091cb] focus:ring-offset-2 transition duration-150 ease-in-out">
+                    Regisztráció
+                  </button>
                 </div>
-              </div>
-              <div>
-                <label htmlFor="billing" className="block text-sm font-medium text-gray-700 mb-1">Számlázási cím (név, cím, adószám)</label>
-                <textarea id="billing" name="billing" rows={3} className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out resize-none"></textarea>
-              </div>
-              <div className="flex justify-center">
-                <button type="submit" className="px-4 py-2 bg-[#5091cb] text-white text-sm font-semibold rounded-md shadow-sm hover:bg-[#327bab] focus:outline-none focus:ring-2 focus:ring-[#5091cb] focus:ring-offset-2 transition duration-150 ease-in-out">
-                  Regisztráció
-                </button>
-              </div>
-            </form>
-            <p className="mt-4 text-center text-xs text-gray-600">
-              A regisztráció után a Schieszl Borház Kft. számlát e-mailben megküldi. A számla kiegyenlítése előre szükséges november 22-ig.
-            </p>
+              </form>
+              <p className="mt-4 text-center text-xs text-gray-600">
+                A regisztráció után a Schieszl Borház Kft. számlát e-mailben megküldi. A számla kiegyenlítése előre szükséges november 22-ig.
+              </p>
+            </div>
+            <img src={imageInside} className='rounded-lg' alt="Inside image" />
           </section>
 
           <section id="kapcsolat" ref={sectionRefs.kapcsolat} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Kapcsolat</h2>
             <h3 className="text-xl font-semibold mb-2">Lavina-Sport Kft.</h3>
+            www.skioutlet.hu
             <p>1027 Budapest, Margit krt. 46.</p>
             <p>Email: info@skioutlet.hu</p>
             <p className="mt-4">Esetleges asztalültetési igényeket e-mailben kérjük jelezni.</p>
 
             <h3 className="text-xl font-semibold mt-6 mb-2">Schieszl Vendéglő és Borház</h3>
+            www.schieszl.hu
             <p>2011 Budakalász, Budai út 83.</p>
           </section>
         </main>
