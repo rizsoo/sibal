@@ -24,6 +24,9 @@ import nagyvillam from '../images/nagyvillam.png'
 import polska from '../images/polska.jpg'
 import sielok from '../images/sielok.jpg'
 import sipark from '../images/sipark.jpg'
+import eva from '../images/eva.jpg'
+import eleven from '../images/eleven.png'
+
 
 const SibalWebsite = () => {
   const [activeSection, setActiveSection] = useState('')
@@ -395,13 +398,14 @@ const SibalWebsite = () => {
                 { name: "Vadon  Sport",   url: "https://www.vadonsport.hu/", img: vadon  },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
                 { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt  },
-                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: "https://www.csakimaronyak.hu/"  },
+                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: eva  },
                 { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu", img: osster  },
                 //{ name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial  },
                 { name: "Síelők.hu", url: "https://sielok.hu/", img: sielok  },
                 //{ name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
-                { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam  }
+                { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam  },
+                { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven  }
               ].map((partner, index) => (
                 <a
                   key={index}
@@ -410,7 +414,7 @@ const SibalWebsite = () => {
                   rel="noopener noreferrer"
                   className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition-shadow duration-300 flex flex-col items-center justify-center"
                 >
-                  <img src={partner.img} alt={`${partner.name} logo`} className="w-16 h-16 object-contain mb-2" />
+                  <img src={partner.img} alt={`${partner.name} logo`} className="w-auto h-16 pl-4 pr-4 object-contain mb-2" />
                   <span className="text-[#5091cb] font-medium text-center text-sm">{partner.name}</span>
                 </a>
               ))}
