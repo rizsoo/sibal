@@ -170,7 +170,7 @@ const SibalWebsite = () => {
             <p className="mb-4">
             Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden
             egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot,
-            2024. november 30-án, szombaton életre hívja a remélhetőleg valóban
+            <b>2024. november 30</b>-án, szombaton életre hívja a remélhetőleg valóban
             Hagyományteremtő Szezonnyitó Síbált, melyre Önt és barátait szeretettel
             várjuk.
             </p>
@@ -178,6 +178,9 @@ const SibalWebsite = () => {
             Számunkra is fontos az értékteremtés, a régi kapcsolatok felélesztése,
             egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
             sítársadalom összefogása az elsődleges célunk.
+            </p>
+            <p className="font-semibold mb-2">
+              Időpont: 2024. november 30.
             </p>
             <p className="font-semibold">
               Dress code: Smart casual
