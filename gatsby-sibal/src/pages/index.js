@@ -7,6 +7,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import logo from '../images/logo_sibal_2.png'
 import imageStanding from '../images/sibal_6.jpg'
 import imageInside from '../images/sibal_5.jpg'
+import nagyTerem from '../images/terem.jpg'
 
 import donovaly from '../images/donovaly.png'
 import klaszter from '../images/klaszter.jpg'
@@ -164,10 +165,16 @@ const SibalWebsite = () => {
           <div className="flex justify-top mb-8">
             <div>
             <p className="mb-4">
-              Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot, 2024. november 30-án, szombaton életre hívja a remélhetőleg valóban Hagyományteremtő Szezonnyitó Síbált, melyre Önt szeretettel várjuk.
+            Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden
+            egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot,
+            2024. november 30-án, szombaton életre hívja a remélhetőleg valóban
+            Hagyományteremtő Szezonnyitó Síbált, melyre Önt és barátait szeretettel
+            várjuk.
             </p>
             <p className="mb-4">
-              A svédasztalos és bál kiemelt célja a szabadidő,- és a hazai versenysportbarátok közös találkozója. Fontos az értékteremtés, régi kapcsolatok felélesztése, egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai sítársadalom valamiféle összefogása az elsődleges cél.
+            Számunkra is fontos az értékteremtés, a régi kapcsolatok felélesztése,
+            egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
+            sítársadalom összefogása az elsődleges célunk.
             </p>
             <p className="font-semibold">
               Dress code: Smart casual
@@ -180,9 +187,9 @@ const SibalWebsite = () => {
           </section>
 
           <section id="helyszin" ref={sectionRefs.helyszin} className="mb-12 bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-3xl font-bold mb-6 text-[#327bab]">Helyszín</h2>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
               <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-bold mb-6 text-[#327bab]">Helyszín</h2>
                 <h3 className="text-2xl font-semibold mb-4 text-[#5091cb]">
                   Schieszl Vendéglő és Borház Bortára
                 </h3>
@@ -202,7 +209,7 @@ const SibalWebsite = () => {
                   <span>Ingyenes parkolás az étterem mögötti parkolóban</span>
                 </div>
               </div>
-              <div className="w-full md:w-1/2">
+              {/*<div className="w-full md:w-1/2">
                 <div className="bg-[#5091cb] text-white p-4 rounded-lg">
                   <h4 className="font-semibold mb-2">Térkép</h4>
                   <div className="aspect-w-16 aspect-h-9">
@@ -217,7 +224,8 @@ const SibalWebsite = () => {
                     </iframe>
                   </div>
                 </div>
-              </div>
+                </div>*/}
+                <img className='rounded-lg w-full md:w-1/2' src={nagyTerem} alt="Standing image" />
             </div>
           </section>
 
@@ -243,7 +251,7 @@ const SibalWebsite = () => {
                             { time: "18:00 - 18:50", event: "Fogadás - Liget program", icon: <Wine size={24} /> },
                             { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <GalleryHorizontal size={24} /> },
                             { time: "19:00 - 19:30", event: "Vendégek köszöntője", icon: <Handshake size={24} /> },
-                            { time: "19:30 - 21:00", event: "Díszvacsora", icon: <Pizza size={24} /> },
+                            { time: "19:30 - 21:00", event: "Svédasztalos vacsora", icon: <Pizza size={24} /> },
                             { time: "21:00 - 21:40", event: "St Martin szaxofon és pánsípművész", icon: <Music2 size={24} /> },
                             { time: "22:10 - 22:30", event: "Műsor (díjátadók...)", icon: <Gift size={24} /> },
                             { time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
@@ -353,6 +361,25 @@ const SibalWebsite = () => {
                   </>
                 )}
               </Disclosure>
+
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
+                      <span className='text-xl'>Kiállítás</span>
+                      <ChevronDown
+                        className={`${
+                          open ? 'transform rotate-180' : ''
+                        } w-5 h-5 text-[#327bab]`}
+                      />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                      <p>A Síbál napján a bálterem feletti galériában Csáki-Maronyák Éva
+                      festőművész síelés tematikájú és havas tájképei megtekinthetők lesznek.</p>
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
             </div>
           </section>
 
@@ -362,19 +389,19 @@ const SibalWebsite = () => {
               {[
                 { name: "Chernel István Si és Turisztikai Klaszter", url:  "http://www.sieljitthon.hu/", img: klaszter },
                 { name: "Magyar Sí Szövetség", url:  "http://www.skihungary.hu/", img: msz  },
-                { name: "Síoktatók Magyarországi Szövetsége", url: "https://www.sioktatok.hu/", img: smsz  },
+                { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz  },
                 { name: "Sípark Mátraszentitván", url: "https://sipark.hu/", img: sipark  },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet  },
                 { name: "Vadon  Sport",   url: "https://www.vadonsport.hu/", img: vadon  },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
                 { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt  },
-                { name: "Csáki-Maronyák Éva festőművész", url: "#", img: "/placeholder.svg?height=100&width=100"  },
+                { name: "Csáki-Maronyák Éva festőművész", url: "#", img: "https://www.csakimaronyak.hu/"  },
                 { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu", img: osster  },
-                { name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
+                //{ name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial  },
                 { name: "Síelők.hu", url: "https://sielok.hu/", img: sielok  },
-                { name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
-                { name: "Nagyvillám Visegrádi sípálya", url: "https://nagyvillam.hu/", img: nagyvillam  }
+                //{ name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
+                { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam  }
               ].map((partner, index) => (
                 <a
                   key={index}
@@ -414,10 +441,10 @@ const SibalWebsite = () => {
             </div>
           </section>
 
-          <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-10 grid grid-cols-2 gap-8">
+          <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-bold mb-4 text-[#327bab]">Regisztráció</h2>
-              <p className="mt-4 text-xs text-gray-600"> Regisztrációs határidő: 2024. november 15.</p>
+              <p className="mt-4 text-xs text-gray-600 mb-2"> Regisztrációs határidő: 2024. november 15.</p>
               <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
                 <div className="grid grid-cols-1 gap-4">
                   <div>
@@ -522,6 +549,9 @@ const SibalWebsite = () => {
                     />
                   </div>
                 )}
+              <p className="mt-4 text-xs text-gray-600">
+                  *Szükséges adat
+              </p>
                 <div className="flex justify-center">
                   <button type="submit" disabled={state.submitting} className="px-4 py-2 bg-[#5091cb] text-white text-sm font-semibold rounded-md shadow-sm hover:bg-[#327bab] focus:outline-none focus:ring-2 focus:ring-[#5091cb] focus:ring-offset-2 transition duration-150 ease-in-out">
                     Regisztráció
@@ -529,7 +559,7 @@ const SibalWebsite = () => {
                 </div>
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
-                A regisztráció után a Schieszl Borház Kft. számlát e-mailben megküldi. A számla kiegyenlítése előre szükséges november 22-ig.
+                A regisztráció után a Schieszl Borház Kft. számlát e-mailben megküldi. A számla kiegyenlítése november 22-ig szükséges.
               </p>
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
@@ -537,14 +567,11 @@ const SibalWebsite = () => {
 
           <section id="kapcsolat" ref={sectionRefs.kapcsolat} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Kapcsolat</h2>
-            <h3 className="text-xl font-semibold mb-2">Lavina-Sport Kft.</h3>
-            www.skioutlet.hu
+            <a href='https://skioutlet.hu' target="_blank"><h3 className="text-xl font-semibold mb-2">Lavina-Sport Kft.</h3></a>           
             <p>1027 Budapest, Margit krt. 46.</p>
             <p>Email: info@skioutlet.hu</p>
             <p className="mt-4">Esetleges asztalültetési igényeket e-mailben kérjük jelezni.</p>
-
-            <h3 className="text-xl font-semibold mt-6 mb-2">Schieszl Vendéglő és Borház</h3>
-            www.schieszl.hu
+            <a href='https://schieszl.hu' target="_blank"><h3 className="text-xl font-semibold mt-6 mb-2">Schieszl Vendéglő és Borház</h3></a>
             <p>2011 Budakalász, Budai út 83.</p>
           </section>
         </main>
