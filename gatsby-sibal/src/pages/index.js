@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { Menu, X, MapPin, Wine, Clock, Music, Gift, Calendar, ParkingCircle, Music2, ListStart, DoorOpen, CheckCheck, Handshake, BookOpen, Microchip, VolumeIcon, Popcorn, GalleryHorizontal, Pizza, ChevronDown } from 'lucide-react'
 import { Disclosure } from '@headlessui/react'
 import { useForm, ValidationError } from '@formspree/react';
+import { Helmet } from 'react-helmet';
 
 import logo from '../images/logo_sibal_2.png'
 import imageStanding from '../images/sibal_6.jpg'
@@ -108,6 +109,19 @@ const SibalWebsite = () => {
 
   return (
     <div className="min-h-screen bg-[#ebf2f9]">
+      <Helmet>
+        <title>Síbál 2024</title>
+        {/* <meta name="description" content={page ? (page.description ? page.description.description : defaultDescription) : (event.description ? event.description.description : defaultDescription)} />
+        <meta name="image" content={page ? (page.image ? page.image.url : `${siteUrl}${image}`) : event.featuredImage.url} />
+        <meta name="title" content={page ? page.title : event.title} />
+        <meta property="og:description" content={page ? (page.description ? page.description.description : defaultDescription) : (event.description ? event.description.description : defaultDescription)} />
+        <meta property="og:image" content={page ? (page.image ? page.image.url : `${siteUrl}${image}`) : event.featuredImage.url} />
+        <meta property="og:site_name" content={page ? page.title : event.title} />
+        <meta property="og:title" content={page ? page.title : event.title} />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:url" content={`${siteUrl}/${(page ? page.node_locale : event.node_locale)}/${(page ? (page.slug === "home" ? "" : page.slug) : event.slug)}`} /> */}
+        {/* <SEO meta={page ? page : event} meta_image={event && event.featuredImage.url} /> */}
+      </Helmet>
       <nav className="sticky top-0 bg-[#327bab] shadow-md z-10 w-full">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
@@ -168,19 +182,15 @@ const SibalWebsite = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-top mb-8">
             <div>
             <p className="mb-4">
-            Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden
-            egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot,
-            <b>2024. november 30</b>-án, szombaton életre hívja a remélhetőleg valóban
-            Hagyományteremtő Szezonnyitó Síbált, melyre Önt és barátait szeretettel
-            várjuk.
+            Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft., amely immár 32 éve minden évben megszervezi az Országos Amatőr Gyermek Síbajnokságot, <b>2024. november 30-án</b>, szombaton megrendezi az első, Hagyományteremtő Szezonnyitó Síbált. Szeretettel várjuk Önt és barátait egy emlékezetes estére, hogy együtt indítsuk el az idei síszezont!
             </p>
             <p className="mb-4">
-            Számunkra is fontos az értékteremtés, a régi kapcsolatok felélesztése,
+            Fontos számunkra az értékteremtés, a régi kapcsolatok felélesztése,
             egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
             sítársadalom összefogása az elsődleges célunk.
             </p>
             <p className="font-semibold mb-2">
-              Időpont: 2024. november 30.
+              Időpont: 2024. november 30, szombat 18:00-tól
             </p>
             <p className="font-semibold">
               Dress code: Smart casual
@@ -200,7 +210,7 @@ const SibalWebsite = () => {
                   Schieszl Vendéglő és Borház Bortára
                 </h3>
                 <p className="mb-4">
-                  Budapest határában, Budakalászon. A tulajdonos és családja igen nagy síelő. Schieszl Konrád, mielőtt átvette volna, a most már ötödik generációs éttermet, szakképzett kiképző síoktató volt.
+                  A vendéglő Budapest határában, Budakalászon található. A tulajdonos és családja igen nagy síelők. Schieszl Konrád, mielőtt átvette volna, a most már ötödik generációs éttermet, szakképzett kiképző síoktató volt.
                 </p>
                 <div className="flex items-center mb-2">
                   <MapPin size={20} className="text-[#5091cb] mr-2" />
@@ -254,13 +264,13 @@ const SibalWebsite = () => {
                         <div className="">
                           {[
                             { time: "18:00", event: "Kapunyitás", icon: <DoorOpen size={24} /> },
-                            { time: "18:00 - 18:50", event: "Fogadás - Liget program", icon: <Wine size={24} /> },
+                            { time: "18:00 - 18:50", event: "Vendégvárás", icon: <Wine size={24} /> },
                             { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <GalleryHorizontal size={24} /> },
                             { time: "19:00 - 19:30", event: "Vendégek köszöntése", icon: <Handshake size={24} /> },
                             { time: "19:30 - 21:00", event: "Svédasztalos vacsora", icon: <Pizza size={24} /> },
                             //{ time: "21:00 - 21:40", event: "St Martin szaxofon és pánsípművész", icon: <Music2 size={24} /> },
-                            { time: "21:00 - 22:30", event: "Zenés műsor, díjátadók", icon: <Music2 size={24} /> },
-                            { time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
+                            { time: "21:00 - 23:40", event: "Zenés műsor, díjátadók", icon: <Music2 size={24} /> },
+                            //{ time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
                             { time: "23:40", event: "Tombola", icon: <Gift size={24} /> },
                             { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös síszezon megnyitása", icon: <Calendar size={24} /> },
                             { time: "01:00", event: "Bál zárása", icon: <Clock size={24} /> },
@@ -307,7 +317,7 @@ const SibalWebsite = () => {
                             <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
                             <li>Friss házi  kenyér</li>
                           </ul>
-                          <p>(Berkel-sonka szeletelő látványelemként)</p>
+                          
                           <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
                         </div>
 
@@ -361,8 +371,8 @@ const SibalWebsite = () => {
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                      <p>A bálbelépő ára tartalmaz 1 darab tombolaszelvényt.</p>
-                      <p>A tombola 8-10 nagy értékű (100.000,-forint körüli) nyeremény, összesen 1 millió forint értékben.</p>
+                      <p>A bálbelépő ára 1 darab tombolaszelvényt/fő tartalmaz.</p>
+                      <p>A tombolán 8-10 nagy értékű nyereményt sorsolunk ki, összesen 1 millió forint értékben.</p>
                     </Disclosure.Panel>
                   </>
                 )}
@@ -381,7 +391,7 @@ const SibalWebsite = () => {
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                       <p>A Síbál napján a bálterem feletti galériában Csáki-Maronyák Éva
-                      festőművész síelés tematikájú és havas tájképei megtekinthetők lesznek.</p>
+                      festőművész síelés tematikájú és havas tájképei lesznek megtekinthetőek.</p>
                     </Disclosure.Panel>
                   </>
                 )}
@@ -393,10 +403,10 @@ const SibalWebsite = () => {
             <h2 className="text-3xl font-bold mb-8 text-[#327bab] text-center">Támogatók és Partnerek</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {[
-                { name: "Chernel István Si és Turisztikai Klaszter", url:  "http://www.sieljitthon.hu/", img: klaszter },
+                { name: "Chernel István Sí és Turisztikai Klaszter", url:  "http://www.sieljitthon.hu/", img: klaszter },
                 { name: "Magyar Sí Szövetség", url:  "http://www.skihungary.hu/", img: msz  },
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz  },
-                { name: "Sípark Mátraszentitván", url: "https://sipark.hu/", img: sipark  },
+                { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark  },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet  },
                 { name: "Vadon  Sport",   url: "https://www.vadonsport.hu/", img: vadon  },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
@@ -430,7 +440,7 @@ const SibalWebsite = () => {
             <div className="bg-[#8ab5dc] text-white rounded-lg p-8 shadow-lg">
               <p className="text-4xl font-bold mb-2 text-center">38.000 Ft</p>
               <p className="mb-3 text-center text-sm text-white-600">(Az ár tartalmazza az ÁFA-t)</p>
-              <p className="text-xl mb-6 text-center">Svédasztalos vacsora és bálbelépő az alábbiakat tartalmazza</p>
+              <p className=" mb-6 text-center">A bálbelépő az alábbiakat tartalmazza</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center justify-center">
                   <Gift className="mr-2" size={24} />
@@ -557,7 +567,7 @@ const SibalWebsite = () => {
                   </div>
                 )}
               <p className="mt-4 text-xs text-gray-600">
-                  *Szükséges adat
+                  *Kötelező mező
               </p>
                 <div className="flex justify-center">
                   <button type="submit" disabled={state.submitting} className="px-4 py-2 bg-[#5091cb] text-white text-sm font-semibold rounded-md shadow-sm hover:bg-[#327bab] focus:outline-none focus:ring-2 focus:ring-[#5091cb] focus:ring-offset-2 transition duration-150 ease-in-out">
@@ -566,7 +576,7 @@ const SibalWebsite = () => {
                 </div>
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
-                A regisztráció után a Schieszl Borház Kft. számlát e-mailben megküldi. A számla kiegyenlítése november 22-ig szükséges.
+                A regisztráció után a Schieszl Borház Kft. a számlát e-mailben küldi. A számlát kérjük november 22-ig rendezzék.
               </p>
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
@@ -587,7 +597,7 @@ const SibalWebsite = () => {
       <div className="bg-[#327bab] text-white py-16 text-center">
         <div className="max-w-[1000px] mx-auto px-4">
           <p className="text-2xl font-bold mb-4">Síbál 2024</p>
-          <p className="text-lg mb-2">Lavina-Sport Kft.</p>
+        
           <p className="text-lg mb-2">A szervezők a programváltozás jogát fenntartják.</p>
           <p className="text-sm">© 2024 Lavina-Sport Kft. Minden jog fenntartva.</p>
         </div>
