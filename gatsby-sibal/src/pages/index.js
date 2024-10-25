@@ -162,28 +162,28 @@ const SibalWebsite = () => {
 
           <section id="esemeny" ref={sectionRefs.esemeny} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Esemény</h2>
-          <div className="flex justify-top mb-8">
-            <div>
-            <p className="mb-4">
-            Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden
-            egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot,
-            2024. november 30-án, szombaton életre hívja a remélhetőleg valóban
-            Hagyományteremtő Szezonnyitó Síbált, melyre Önt és barátait szeretettel
-            várjuk.
-            </p>
-            <p className="mb-4">
-            Számunkra is fontos az értékteremtés, a régi kapcsolatok felélesztése,
-            egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
-            sítársadalom összefogása az elsődleges célunk.
-            </p>
-            <p className="font-semibold">
-              Dress code: Smart casual
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center mb-8 gap-4">
+              <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center">
+                <img src={logo} alt="Síbál 2024 Logo" className="object-contain" />
+              </div>
+              <div className="text-left sm:ml-6">
+                <p className="mb-4">
+                  Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft, mely már 32 éve minden
+                  egyes esztendőben megszervezi az Országos Amatőr Gyermek Síbajnokságot,
+                  2024. november 30-án, szombaton életre hívja a remélhetőleg valóban
+                  Hagyományteremtő Szezonnyitó Síbált, melyre Önt és barátait szeretettel
+                  várjuk.
+                </p>
+                <p className="mb-4">
+                  Számunkra is fontos az értékteremtés, a régi kapcsolatok felélesztése,
+                  egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
+                  sítársadalom összefogása az elsődleges célunk.
+                </p>
+                <p className="font-semibold">
+                  Dress code: Smart casual
+                </p>
+              </div>
             </div>
-            <div className="w-100 h-100 pl-4 pr-4 ml-6 bg-white rounded-full flex items-baseline justify-center">
-              <img src={logo} alt="Síbál 2024 Logo" />
-            </div>
-          </div>
           </section>
 
           <section id="helyszin" ref={sectionRefs.helyszin} className="mb-12 bg-white rounded-lg shadow-md p-6">
@@ -198,7 +198,7 @@ const SibalWebsite = () => {
                 </p>
                 <div className="flex items-center mb-2">
                   <MapPin size={20} className="text-[#5091cb] mr-2" />
-                  <span>2011 Budakalász, Budai út 83.</span>
+                  <span className='underline'><a href="https://maps.app.goo.gl/LHd84KResA6fUNQQA" target="_blank">2011 Budakalász, Budai út 83.</a></span>
                 </div>
                 <div className="flex items-center">
                   <Wine size={20} className="text-[#5091cb] mr-2" />
