@@ -25,7 +25,7 @@ import nagyvillam from '../images/nagyvillam.png'
 import polska from '../images/polska.jpg'
 import sielok from '../images/sielok.jpg'
 import sipark from '../images/sipark.jpg'
-import eva from '../images/eva.jpg'
+import evafest from '../images/eva.jpg'
 import eleven from '../images/eleven.png'
 
 
@@ -411,7 +411,7 @@ const SibalWebsite = () => {
                 { name: "Vadon  Sport",   url: "https://www.vadonsport.hu/", img: vadon  },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
                 { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt  },
-                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: eva  },
+                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: evafest  },
                 { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu", img: osster  },
                 //{ name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial  },
