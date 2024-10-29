@@ -27,6 +27,8 @@ import sielok from '../images/sielok.jpg'
 import sipark from '../images/sipark.jpg'
 import evafest from '../images/eva.jpg'
 import eleven from '../images/eleven.png'
+import parksnow from '../images/parksnow.png'
+import domex from '../images/domex.png'
 
 
 const SibalWebsite = () => {
@@ -189,11 +191,17 @@ const SibalWebsite = () => {
             egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
             sítársadalom összefogása az elsődleges célunk.
             </p>
-            <p className="font-semibold mb-2">
-              Időpont: 2024. november 30, szombat 18:00-tól
+            <p className="mb-2">
+              <b>Időpont:</b> 2024. november 30, szombat 18:00-tól
             </p>
-            <p className="font-semibold">
-              Dress code: Smart casual
+            <p className="mb-2">
+              <b>Dress code: </b>Smart casual
+            </p>
+            <p className="mb-2">
+              <b>A síbál fővédnöke: </b>Szijjártó Péter külgazdasági és külügyminiszter, képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja el.
+            </p>
+            <p>
+              <b>Az est műsorvezetője: </b>Klausmann Viktor
             </p>
             </div>
             <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
@@ -408,7 +416,7 @@ const SibalWebsite = () => {
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz  },
                 { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark  },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet  },
-                { name: "Vadon  Sport",   url: "https://www.vadonsport.hu/", img: vadon  },
+                { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow  },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
                 { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt  },
                 { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: evafest  },
@@ -416,6 +424,7 @@ const SibalWebsite = () => {
                 //{ name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
                 { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial  },
                 { name: "Síelők.hu", url: "https://sielok.hu/", img: sielok  },
+                { name: "Domex Laminált padló és szőnyeg áruház", url: "https://domexszonyeg.hu/", img: domex  },
                 //{ name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
                 { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam  },
                 { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven  }
