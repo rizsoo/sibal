@@ -273,11 +273,11 @@ const SibalWebsite = () => {
                           {[
                             { time: "18:00", event: "Kapunyitás", icon: <DoorOpen size={24} /> },
                             { time: "18:00 - 18:50", event: "Vendégvárás", icon: <Wine size={24} /> },
-                            { time: "18:55 - 19:00", event: "Síbál megnyitója", icon: <GalleryHorizontal size={24} /> },
+                            { time: "18:55 - 19:00", event: "Síbál megnyitója, Forbi Brass Zenei Köszöntő", icon: <GalleryHorizontal size={24} /> },
                             { time: "19:00 - 19:30", event: "Vendégek köszöntése", icon: <Handshake size={24} /> },
                             { time: "19:30 - 21:00", event: "Svédasztalos vacsora", icon: <Pizza size={24} /> },
                             //{ time: "21:00 - 21:40", event: "St Martin szaxofon és pánsípművész", icon: <Music2 size={24} /> },
-                            { time: "21:00 - 23:40", event: "Zenés műsor, díjátadók", icon: <Music2 size={24} /> },
+                            { time: "21:00 - 23:40", event: " Forbi Brass Zenekar, díjátadók", icon: <Music2 size={24} /> },
                             //{ time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
                             { time: "23:40", event: "Tombola", icon: <Gift size={24} /> },
                             { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös síszezon megnyitása", icon: <Calendar size={24} /> },
