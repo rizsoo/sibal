@@ -277,10 +277,10 @@ const SibalWebsite = () => {
                             { time: "19:00 - 19:30", event: "Vendégek köszöntése", icon: <Handshake size={24} /> },
                             { time: "19:30 - 21:00", event: "Svédasztalos vacsora", icon: <Pizza size={24} /> },
                             //{ time: "21:00 - 21:40", event: "St Martin szaxofon és pánsípművész", icon: <Music2 size={24} /> },
-                            { time: "21:00 - 23:40", event: " Forbi Brass Zenekar, díjátadók", icon: <Music2 size={24} /> },
+                            { time: "21:00 - 23:40", event: "Forbi Brass Zenekar, díjátadók, táncmulatság", icon: <Music2 size={24} /> },
                             //{ time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
                             { time: "23:40", event: "Tombola", icon: <Gift size={24} /> },
-                            { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös síszezon megnyitása", icon: <Calendar size={24} /> },
+                            { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös síszezon megnyitása, táncmulatság", icon: <Calendar size={24} /> },
                             { time: "01:00", event: "Bál zárása", icon: <Clock size={24} /> },
                           ].map((item, index) => (
                             <div key={index} className="flex items-start mb-3">
