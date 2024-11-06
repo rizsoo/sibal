@@ -277,7 +277,7 @@ const SibalWebsite = () => {
                             { time: "19:00 - 19:30", event: "Vendégek köszöntése", icon: <Handshake size={24} /> },
                             { time: "19:30 - 21:00", event: "Svédasztalos vacsora", icon: <Pizza size={24} /> },
                             //{ time: "21:00 - 21:40", event: "St Martin szaxofon és pánsípművész", icon: <Music2 size={24} /> },
-                            { time: "21:00 - 23:40", event: "Forbi Brass Zenekar, díjátadók, táncmulatság", icon: <Music2 size={24} /> },
+                            { time: "21:00 - 23:40", event: "Forbi Brass Zenekar, díjátadók, táncmulatság DJ Vincze Tamás", icon: <Music2 size={24} /> },
                             //{ time: "22:40 - 23:40", event: "Zenei program", icon: <Music size={24} /> },
                             { time: "23:40", event: "Tombola", icon: <Gift size={24} /> },
                             { time: "24:00", event: "Az első téli nap köszöntése, a 2024/25-ös síszezon megnyitása, táncmulatság", icon: <Calendar size={24} /> },
@@ -585,7 +585,7 @@ const SibalWebsite = () => {
                 </div>
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
-                A regisztráció után a Schieszl Borház Kft. a számlát e-mailben küldi. A számlát kérjük november 22-ig rendezzék.
+              A regisztrációs határidó (november 15.) után a Schieszl Borház Kft. a számlát e-mailben küldi.
               </p>
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
