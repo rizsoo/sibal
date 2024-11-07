@@ -29,6 +29,7 @@ import evafest from '../images/eva.jpg'
 import eleven from '../images/eleven.png'
 import parksnow from '../images/parksnow.png'
 import domex from '../images/domex.png'
+import honda from '../images/honda.png'
 
 
 const SibalWebsite = () => {
@@ -60,7 +61,7 @@ const SibalWebsite = () => {
     const element = sectionRefs[sectionId].current;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    window.scrollTo({top: y, behavior: 'smooth'});
+    window.scrollTo({ top: y, behavior: 'smooth' });
     setActiveSection(sectionId)
     setIsMenuOpen(false)
   }
@@ -105,8 +106,8 @@ const SibalWebsite = () => {
   }
 
   if (state.succeeded) {
-      //setSuccess(true)
-      alert("Sikeres regisztráció!")
+    //setSuccess(true)
+    alert("Sikeres regisztráció!")
   }
 
   return (
@@ -134,11 +135,10 @@ const SibalWebsite = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  className={`px-3 py-2 rounded-md transition-colors ${
-                    activeSection === item.id
-                      ? 'bg-white text-[#327bab]'
-                      : 'text-white hover:bg-[#5091cb]'
-                  }`}
+                  className={`px-3 py-2 rounded-md transition-colors ${activeSection === item.id
+                    ? 'bg-white text-[#327bab]'
+                    : 'text-white hover:bg-[#5091cb]'
+                    }`}
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.label}
@@ -161,11 +161,10 @@ const SibalWebsite = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-                    activeSection === item.id
-                      ? 'bg-white text-[#327bab]'
-                      : 'text-white hover:bg-[#5091cb]'
-                  }`}
+                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${activeSection === item.id
+                    ? 'bg-white text-[#327bab]'
+                    : 'text-white hover:bg-[#5091cb]'
+                    }`}
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.label}
@@ -182,38 +181,38 @@ const SibalWebsite = () => {
           <section id="esemeny" ref={sectionRefs.esemeny} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Esemény</h2>
             <div className="flex flex-col sm:flex-row gap-6 justify-top mb-8">
-            <div>
-            <p className="mb-4">
-            Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft., amely immár 32 éve minden évben megszervezi az Országos Amatőr Gyermek Síbajnokságot, <b>2024. november 30-án</b>, szombaton megrendezi az első, Hagyományteremtő Szezonnyitó Síbált. Szeretettel várjuk Önt és barátait egy emlékezetes estére, hogy együtt indítsuk el az idei síszezont!
-            </p>
-            <p className="mb-4">
-            Fontos számunkra az értékteremtés, a régi kapcsolatok felélesztése,
-            egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
-            sítársadalom összefogása az elsődleges célunk.
-            </p>
-            <p className="mb-2">
-              <b>Időpont:</b> 2024. november 30, szombat 18:00-tól
-            </p>
-            <p className="mb-2">
-              <b>Dress code: </b>Smart casual
-            </p>
-            <p className="mb-2">
-              <b>A síbál fővédnöke: </b>Szijjártó Péter külgazdasági és külügyminiszter, képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja el.
-            </p>
-            <p>
-              <b>Az est műsorvezetője: </b>Klausmann Viktor
-            </p>
+              <div>
+                <p className="mb-4">
+                  Örömmel tájékoztatjuk, hogy a Lavina-Sport Kft., amely immár 32 éve minden évben megszervezi az Országos Amatőr Gyermek Síbajnokságot, <b>2024. november 30-án</b>, szombaton megrendezi az első, Hagyományteremtő Szezonnyitó Síbált. Szeretettel várjuk Önt és barátait egy emlékezetes estére, hogy együtt indítsuk el az idei síszezont!
+                </p>
+                <p className="mb-4">
+                  Fontos számunkra az értékteremtés, a régi kapcsolatok felélesztése,
+                  egyben új kapcsolatok kiépítése. A rendezvény megszervezésével a hazai
+                  sítársadalom összefogása az elsődleges célunk.
+                </p>
+                <p className="mb-2">
+                  <b>Időpont:</b> 2024. november 30, szombat 18:00-tól
+                </p>
+                <p className="mb-2">
+                  <b>Dress code: </b>Smart casual
+                </p>
+                <p className="mb-2">
+                  <b>A síbál fővédnöke: </b>Szijjártó Péter külgazdasági és külügyminiszter, képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja el.
+                </p>
+                <p>
+                  <b>Az est műsorvezetője: </b>Klausmann Viktor
+                </p>
+              </div>
+              <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
+                <img src={logo} alt="Síbál 2024 Logo" />
+              </div>
             </div>
-            <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
-              <img src={logo} alt="Síbál 2024 Logo" />
-            </div>
-          </div>
           </section>
 
           <section id="helyszin" ref={sectionRefs.helyszin} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
               <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-bold mb-6 text-[#327bab]">Helyszín</h2>
+                <h2 className="text-3xl font-bold mb-6 text-[#327bab]">Helyszín</h2>
                 <h3 className="text-2xl font-semibold mb-4 text-[#5091cb]">
                   Schieszl Vendéglő és Borház Bortára
                 </h3>
@@ -249,7 +248,7 @@ const SibalWebsite = () => {
                   </div>
                 </div>
                 </div>*/}
-                <img className='rounded-lg w-full md:w-1/2' src={nagyTerem} alt="Standing image" />
+              <img className='rounded-lg w-full md:w-1/2' src={nagyTerem} alt="Standing image" />
             </div>
           </section>
 
@@ -262,9 +261,8 @@ const SibalWebsite = () => {
                     <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
                       <span className='text-xl'>Időrend</span>
                       <ChevronDown
-                        className={`${
-                          open ? 'transform rotate-180' : ''
-                        } w-5 h-5 text-[#327bab]`}
+                        className={`${open ? 'transform rotate-180' : ''
+                          } w-5 h-5 text-[#327bab]`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
@@ -299,7 +297,7 @@ const SibalWebsite = () => {
                         </div>
                       </div>
                     </Disclosure.Panel>
-                  
+
                   </>
                 )}
               </Disclosure>
@@ -310,9 +308,8 @@ const SibalWebsite = () => {
                     <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
                       <span className='text-xl'>Menü</span>
                       <ChevronDown
-                        className={`${
-                          open ? 'transform rotate-180' : ''
-                        } w-5 h-5 text-[#327bab]`}
+                        className={`${open ? 'transform rotate-180' : ''
+                          } w-5 h-5 text-[#327bab]`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
@@ -325,7 +322,7 @@ const SibalWebsite = () => {
                             <li>Zakuszka csatos üvegben, sajt, friss zöldségek</li>
                             <li>Friss házi  kenyér</li>
                           </ul>
-                          
+
                           <p>Ital: korlátlanul az italcsomag szerint, habzóbor</p>
                         </div>
 
@@ -373,14 +370,28 @@ const SibalWebsite = () => {
                     <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
                       <span className='text-xl'>Tombola</span>
                       <ChevronDown
-                        className={`${
-                          open ? 'transform rotate-180' : ''
-                        } w-5 h-5 text-[#327bab]`}
+                        className={`${open ? 'transform rotate-180' : ''
+                          } w-5 h-5 text-[#327bab]`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                       <p>A bálbelépő ára 1 darab tombolaszelvényt/fő tartalmaz.</p>
                       <p>A tombolán 8-10 nagy értékű nyereményt sorsolunk ki, összesen 1 millió forint értékben.</p>
+                    </Disclosure.Panel>
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                      <p className='font-bold mb-3'>Nyeremények:</p>
+                      <ul>
+                        <li>- Honda CR-V 2 hetes tesztelési lehetőség a téli szünetben</li>
+                        <li>- Mátraszentistván 2024/2025 szezonbérlet 1 főre</li>
+                        <li>- Mátraszentistván 2 napos síbérlet 4 fő részére (2 felnőtt, 2 gyerek)</li>
+                        <li>- 100.000.- forintos vásárlási HEAD síléc utalvány a TandT üzletben</li>
+                        <li>- Csáki-Maronyák Éva sítémájú festmény (kb. 100.000 forint értékben)</li>
+                        <li>- Mondial Assistance: 2 darab nagy értékű utazóbőrönd</li>
+                        <li>- Két darab Fundango (női és férfi) szabadon választható sídzseki</li>
+                        <li>- 100.000.- forintos DOMEX szőnyegvásárlási utalvány</li>
+                        <li>- Donovaly 4 főre szóló 1 napos síbérlet</li>
+                        <li>- Nagyvillám Sípálya (Visegrád) 1 napos síbérlet 4 főre</li>
+                      </ul>
                     </Disclosure.Panel>
                   </>
                 )}
@@ -392,14 +403,13 @@ const SibalWebsite = () => {
                     <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
                       <span className='text-xl'>Kiállítás</span>
                       <ChevronDown
-                        className={`${
-                          open ? 'transform rotate-180' : ''
-                        } w-5 h-5 text-[#327bab]`}
+                        className={`${open ? 'transform rotate-180' : ''
+                          } w-5 h-5 text-[#327bab]`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                       <p>A Síbál napján a bálterem feletti galériában Csáki-Maronyák Éva
-                      festőművész síelés tematikájú és havas tájképei lesznek megtekinthetőek.</p>
+                        festőművész síelés tematikájú és havas tájképei lesznek megtekinthetőek.</p>
                     </Disclosure.Panel>
                   </>
                 )}
@@ -411,9 +421,8 @@ const SibalWebsite = () => {
                     <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
                       <span className='text-xl'>Szálláslehetőségek a közelben</span>
                       <ChevronDown
-                        className={`${
-                          open ? 'transform rotate-180' : ''
-                        } w-5 h-5 text-[#327bab]`}
+                        className={`${open ? 'transform rotate-180' : ''
+                          } w-5 h-5 text-[#327bab]`}
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
@@ -421,11 +430,11 @@ const SibalWebsite = () => {
                       <p>Budakalász</p>
                       <a className='underline' href='mailto:kati.zimmer.budakalasz@gmail.com'>kati.zimmer.budakalasz@gmail.com</a>
                       <p>Telefon: 06 26 341 290</p>
-                      <br/>
+                      <br />
                       <b>Alfréd Panzió</b>
                       <p>Budakalász</p>
                       <a className='underline' target='_blank' href='https://maps.app.goo.gl/Lz7mULaLSM8u4SSFA'>1038 Budapest Vasút sor 20.</a>
-                      <br/><a className='underline' href='mailto:info@alfredpanzio.hu'>info@alfredpanzio.hu</a>
+                      <br /><a className='underline' href='mailto:info@alfredpanzio.hu'>info@alfredpanzio.hu</a>
                       <p>Telefon: 06 30 525 5832</p>
                     </Disclosure.Panel>
                   </>
@@ -438,23 +447,24 @@ const SibalWebsite = () => {
             <h2 className="text-3xl font-bold mb-8 text-[#327bab] text-center">Támogatók és Partnerek</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {[
-                { name: "Chernel István Sí és Turisztikai Klaszter", url:  "http://www.sieljitthon.hu/", img: klaszter },
-                { name: "Magyar Sí Szövetség", url:  "http://www.skihungary.hu/", img: msz  },
-                { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz  },
-                { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark  },
-                { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet  },
-                { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow  },
-                { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango  },
-                { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt  },
-                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: evafest  },
-                { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu", img: osster  },
+                { name: "Chernel István Sí és Turisztikai Klaszter", url: "http://www.sieljitthon.hu/", img: klaszter },
+                { name: "Magyar Sí Szövetség", url: "http://www.skihungary.hu/", img: msz },
+                { name: "Honda", url: "http://www.honda.hu/", img: honda },
+                { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz },
+                { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark },
+                { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet },
+                { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow },
+                { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango },
+                { name: "Tandtsport Sí és Snowboard Központ", url: "https://tandtsport.hu/", img: tandt },
+                { name: "Csáki-Maronyák Éva festőművész", url: "https://www.csakimaronyak.hu/", img: evafest },
+                { name: "Osztrák Idegenforgalmi Képviselet", url: "https://www.austria.info/hu", img: osster },
                 //{ name: "Lengyel Idegenforgalmi Szervezet", url: "https://www.lengyelorszag.travel/hu", img: polska  },
-                { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial  },
-                { name: "Síelők.hu", url: "https://sielok.hu/", img: sielok  },
-                { name: "Domex Laminált padló és szőnyeg áruház", url: "https://domexszonyeg.hu/", img: domex  },
+                { name: "Mondial Assistance", url: "https://www.mondial-assistance.hu/", img: mondial },
+                { name: "Síelők.hu", url: "https://sielok.hu/", img: sielok },
+                { name: "Domex Laminált padló és szőnyeg áruház", url: "https://domexszonyeg.hu/", img: domex },
                 //{ name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
-                { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam  },
-                { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven  }
+                { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam },
+                { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven }
               ].map((partner, index) => (
                 <a
                   key={index}
@@ -502,70 +512,70 @@ const SibalWebsite = () => {
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Név*</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
-                      required 
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out"
                     />
-                    <ValidationError 
-                        prefix="name" 
-                        field="name"
-                        errors={state.errors}
+                    <ValidationError
+                      prefix="name"
+                      field="name"
+                      errors={state.errors}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail cím*</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      name="email" 
-                      required 
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out"
                     />
-                    <ValidationError 
-                        prefix="email" 
-                        field="email"
-                        errors={state.errors}
+                    <ValidationError
+                      prefix="email"
+                      field="email"
+                      errors={state.errors}
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefonszám</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
+                    <input
+                      type="tel"
+                      id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out"
                     />
-                    <ValidationError 
-                        prefix="phone" 
-                        field="phone"
-                        errors={state.errors}
+                    <ValidationError
+                      prefix="phone"
+                      field="phone"
+                      errors={state.errors}
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="billing" className="block text-sm font-medium text-gray-700 mb-1">Számlázási cím (név, cím, adószám)</label>
-                  <textarea 
-                    id="billing" 
-                    name="billing" 
+                  <textarea
+                    id="billing"
+                    name="billing"
                     rows={3}
                     value={formData.billing}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out resize-none"
                   ></textarea>
-                  <ValidationError 
-                        prefix="billing" 
-                        field="billing"
-                        errors={state.errors}
-                    />
+                  <ValidationError
+                    prefix="billing"
+                    field="billing"
+                    errors={state.errors}
+                  />
                 </div>
                 <div>
                   <label className="flex items-center">
@@ -576,10 +586,10 @@ const SibalWebsite = () => {
                       onChange={handleInputChange}
                       className="mr-2"
                     />
-                    <ValidationError 
-                        prefix="plusOne" 
-                        field="name"
-                        errors={state.errors}
+                    <ValidationError
+                      prefix="plusOne"
+                      field="name"
+                      errors={state.errors}
                     />
                     <span className="text-sm font-medium text-gray-700">Plusz egy fő</span>
                   </label>
@@ -587,24 +597,24 @@ const SibalWebsite = () => {
                 {formData.plusOne && (
                   <div>
                     <label htmlFor="plusOneName" className="block text-sm font-medium text-gray-700 mb-1">Plusz egy fő neve</label>
-                    <input 
-                      type="text" 
-                      id="plusOneName" 
+                    <input
+                      type="text"
+                      id="plusOneName"
                       name="plusOneName"
                       value={formData.plusOneName}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out" 
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#5091cb] focus:border-transparent transition duration-150 ease-in-out"
                     />
-                    <ValidationError 
-                        prefix="plusOneName" 
-                        field="plusOneName"
-                        errors={state.errors}
+                    <ValidationError
+                      prefix="plusOneName"
+                      field="plusOneName"
+                      errors={state.errors}
                     />
                   </div>
                 )}
-              <p className="mt-4 text-xs text-gray-600">
+                <p className="mt-4 text-xs text-gray-600">
                   *Kötelező mező
-              </p>
+                </p>
                 <div className="flex justify-center">
                   <button type="submit" disabled={state.submitting} className="px-4 py-2 bg-[#5091cb] text-white text-sm font-semibold rounded-md shadow-sm hover:bg-[#327bab] focus:outline-none focus:ring-2 focus:ring-[#5091cb] focus:ring-offset-2 transition duration-150 ease-in-out">
                     Regisztráció
@@ -612,7 +622,7 @@ const SibalWebsite = () => {
                 </div>
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
-              A regisztrációs határidó (november 15.) után a Schieszl Borház Kft. a számlát e-mailben küldi.
+                A regisztrációs határidó (november 15.) után a Schieszl Borház Kft. a számlát e-mailben küldi.
               </p>
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
@@ -620,7 +630,7 @@ const SibalWebsite = () => {
 
           <section id="kapcsolat" ref={sectionRefs.kapcsolat} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Kapcsolat</h2>
-            <a href='https://skioutlet.hu' target="_blank"><h3 className="text-xl font-semibold mb-2">Lavina-Sport Kft.</h3></a>           
+            <a href='https://skioutlet.hu' target="_blank"><h3 className="text-xl font-semibold mb-2">Lavina-Sport Kft.</h3></a>
             <p>1027 Budapest, Margit krt. 46.</p>
             <p>Email: info@skioutlet.hu</p>
             <p className="mt-4">Esetleges asztalültetési igényeket e-mailben kérjük jelezni.</p>
@@ -633,12 +643,12 @@ const SibalWebsite = () => {
       <div className="bg-[#327bab] text-white py-16 text-center">
         <div className="max-w-[1000px] mx-auto px-4">
           <p className="text-2xl font-bold mb-4">Síbál 2024</p>
-        
+
           <p className="text-lg mb-2">A szervezők a programváltozás jogát fenntartják.</p>
           <p className="text-sm">© 2024 Lavina-Sport Kft. Minden jog fenntartva.</p>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
