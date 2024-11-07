@@ -404,6 +404,33 @@ const SibalWebsite = () => {
                   </>
                 )}
               </Disclosure>
+
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-[#327bab] bg-[#ebf2f9] rounded-lg hover:bg-[#d1e4f5] focus:outline-none focus-visible:ring focus-visible:ring-[#5091cb] focus-visible:ring-opacity-75">
+                      <span className='text-xl'>Szálláslehetőségek a közelben</span>
+                      <ChevronDown
+                        className={`${
+                          open ? 'transform rotate-180' : ''
+                        } w-5 h-5 text-[#327bab]`}
+                      />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                      <b>Kati Zimmer</b>
+                      <p>Budakalász</p>
+                      <a className='underline' href='mailto:kati.zimmer.budakalasz@gmail.com'>kati.zimmer.budakalasz@gmail.com</a>
+                      <p>Telefon: 06 26 341 290</p>
+                      <br/>
+                      <b>Alfréd Panzió</b>
+                      <p>Budakalász</p>
+                      <a className='underline' target='_blank' href='https://maps.app.goo.gl/Lz7mULaLSM8u4SSFA'>1038 Budapest Vasút sor 20.</a>
+                      <br/><a className='underline' href='mailto:info@alfredpanzio.hu'>info@alfredpanzio.hu</a>
+                      <p>Telefon: 06 30 525 5832</p>
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
             </div>
           </section>
 
