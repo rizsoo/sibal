@@ -30,6 +30,10 @@ import eleven from '../images/eleven.png'
 import parksnow from '../images/parksnow.png'
 import domex from '../images/domex.png'
 import honda from '../images/honda.png'
+import wax from '../images/wax.png'
+import zemplen from '../images/zemplen.jpg'
+import narad from '../images/narad.png'
+
 
 
 const SibalWebsite = () => {
@@ -199,8 +203,14 @@ const SibalWebsite = () => {
                 <p className="mb-2">
                   <b>A síbál fővédnöke: </b>Szijjártó Péter külgazdasági és külügyminiszter, képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja el.
                 </p>
-                <p>
+                <p className="mb-2">
                   <b>Az est műsorvezetője: </b>Klausmann Viktor
+                </p>
+                <p>
+                  <b>A Síbálon átadásra kerülnek az alábbi díjak: </b>
+                  <p>- Magyar Sí Szövetség részéről: "ÉV SÍZŐJE" díj</p>
+                  <p>- Síoktatók Magyarországi Szövetsége részéről Hejhó síelni jó! Nyílt Sítanpályák Program 2023-2024"-ben legtöbb síeléssel összekötött osztálykirándulást lebonyolító sítanpályának.</p>
+                  <p>- Chernel István Sí és Turisztikai Klaszter részéről Média Partneri díj</p>
                 </p>
               </div>
               <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
@@ -391,6 +401,9 @@ const SibalWebsite = () => {
                         <li>- 100.000.- forintos DOMEX szőnyegvásárlási utalvány</li>
                         <li>- Donovaly 4 főre szóló 1 napos síbérlet</li>
                         <li>- Nagyvillám Sípálya (Visegrád) 1 napos síbérlet 4 főre</li>
+                        <li>- 10 db Zemplén Kalandpark Nemzeti összetartozás hídjára belépő (50.000,- forint)</li>
+                        <li>- 1 db síoktatásra szóló utalvány a Wax Klub síiskolába (65.000,-forint)</li>
+                        <li>- Hotel Narád (Mátraszentimre) félpanziós szállás 2 éjszaka 2 főre</li>
                       </ul>
                     </Disclosure.Panel>
                   </>
@@ -464,6 +477,9 @@ const SibalWebsite = () => {
                 { name: "Domex Laminált padló és szőnyeg áruház", url: "https://domexszonyeg.hu/", img: domex },
                 //{ name: "Magyar Vitorlás Szövetség", url: "https://www.hunsail.hu/", img: mvsz  },
                 { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam },
+                { name: "Zemplén Kalandpark", url: "https://www.zemplenkalandpark.hu/", img: zemplen },
+                { name: "Hotel Narád", url: "https://narad.accenthotels.com/hu", img: narad },
+                { name: "Wax Klub síiskolába", url: "https://waxklub.hu/", img: wax  },
                 { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven }
               ].map((partner, index) => (
                 <a
