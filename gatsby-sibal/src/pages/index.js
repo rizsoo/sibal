@@ -33,7 +33,7 @@ import honda from '../images/honda.png'
 import wax from '../images/wax.png'
 import zemplen from '../images/zemplen.jpg'
 import narad from '../images/narad.png'
-
+import murau from '../images/murau.jpg'
 
 
 const SibalWebsite = () => {
@@ -389,6 +389,30 @@ const SibalWebsite = () => {
                       <p>A tombolán 8-10 nagy értékű nyereményt sorsolunk ki, összesen 1 millió forint értékben.</p>
                     </Disclosure.Panel>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                      <p className='font-bold mb-3'>Fődíj:</p>
+                      <ul>
+                        <li>Freestyle Világkupa hétvége két fő részére Kreischberg/Murau régióban,
+                          2025. január 10-12.
+                          2 éjszaka félpanzióval, kétágyas szobában
+                          <br/>
+                        3 napos síbérlet Kreischberg/Lachtalra
+                        <br/>
+                        Belépés a VIP területre Snowboard Big World Cup 2025. január 11.</li>
+                        <li>- Mátraszentistván 2024/2025 szezonbérlet 1 főre</li>
+                        <li>- Mátraszentistván 2 napos síbérlet 4 fő részére (2 felnőtt, 2 gyerek)</li>
+                        <li>- 100.000.- forintos vásárlási HEAD síléc utalvány a TandT üzletben</li>
+                        <li>- Csáki-Maronyák Éva sítémájú festmény (kb. 100.000 forint értékben)</li>
+                        <li>- Mondial Assistance: 2 darab nagy értékű utazóbőrönd</li>
+                        <li>- Két darab Fundango (női és férfi) szabadon választható sídzseki</li>
+                        <li>- 100.000.- forintos DOMEX szőnyegvásárlási utalvány</li>
+                        <li>- Donovaly 4 főre szóló 1 napos síbérlet</li>
+                        <li>- Nagyvillám Sípálya (Visegrád) 1 napos síbérlet 4 főre</li>
+                        <li>- 10 db Zemplén Kalandpark Nemzeti összetartozás hídjára belépő (50.000,- forint)</li>
+                        <li>- 1 db síoktatásra szóló utalvány a Wax Klub síiskolába (65.000,-forint)</li>
+                        <li>- Hotel Narád (Mátraszentimre) félpanziós szállás 2 éjszaka 2 főre</li>
+                      </ul>
+                    </Disclosure.Panel>
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                       <p className='font-bold mb-3'>Nyeremények:</p>
                       <ul>
                         <li>- Honda CR-V 2 hetes tesztelési lehetőség a téli szünetben</li>
@@ -465,6 +489,7 @@ const SibalWebsite = () => {
                 { name: "Honda", url: "http://www.honda.hu/", img: honda },
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz },
                 { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark },
+                { name: "Kreischberg Murau", url: "https://kreischberg.at", img: murau },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet },
                 { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango },
