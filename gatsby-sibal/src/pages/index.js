@@ -477,7 +477,7 @@ const SibalWebsite = () => {
                 { name: "Honda", url: "http://www.honda.hu/", img: honda },
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz },
                 { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark },
-                { name: "Kreischberg Murau", url: "https://kreischberg.at", img: murau },
+                { name: "Murau Steiermark", url: "https://www.steiermark.com/de/Murau", img: murau },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet },
                 { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango },
@@ -536,7 +536,7 @@ const SibalWebsite = () => {
           <section id="regisztracio" ref={sectionRefs.regisztracio} className="mb-12 bg-white rounded-lg shadow-md p-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-bold mb-4 text-[#327bab]">Regisztráció</h2>
-              <p className="mt-4 text-xs text-gray-600 mb-2"> Regisztrációs határidő: 2024. november 15.</p>
+              <p className="mt-4 text-xs text-gray-600 mb-2"> Regisztrációs határidő: 2024. november 21.</p>
               <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
                 <div className="grid grid-cols-1 gap-4">
                   <div>
