@@ -388,7 +388,7 @@ const SibalWebsite = () => {
                       <p>A bálbelépő ára 1 darab tombolaszelvényt/fő tartalmaz.</p>
                       <p>A tombolán 8-10 nagy értékű nyereményt sorsolunk ki, összesen 1 millió forint értékben.</p>
                     </Disclosure.Panel>
-                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                    <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500 mb-3">
                       <p className='font-bold mb-3'>Fődíj:</p>
                       <ul>
                         <li>Freestyle Világkupa hétvége két fő részére Kreischberg/Murau régióban,
@@ -398,18 +398,6 @@ const SibalWebsite = () => {
                         3 napos síbérlet Kreischberg/Lachtalra
                         <br/>
                         Belépés a VIP területre Snowboard Big World Cup 2025. január 11.</li>
-                        <li>- Mátraszentistván 2024/2025 szezonbérlet 1 főre</li>
-                        <li>- Mátraszentistván 2 napos síbérlet 4 fő részére (2 felnőtt, 2 gyerek)</li>
-                        <li>- 100.000.- forintos vásárlási HEAD síléc utalvány a TandT üzletben</li>
-                        <li>- Csáki-Maronyák Éva sítémájú festmény (kb. 100.000 forint értékben)</li>
-                        <li>- Mondial Assistance: 2 darab nagy értékű utazóbőrönd</li>
-                        <li>- Két darab Fundango (női és férfi) szabadon választható sídzseki</li>
-                        <li>- 100.000.- forintos DOMEX szőnyegvásárlási utalvány</li>
-                        <li>- Donovaly 4 főre szóló 1 napos síbérlet</li>
-                        <li>- Nagyvillám Sípálya (Visegrád) 1 napos síbérlet 4 főre</li>
-                        <li>- 10 db Zemplén Kalandpark Nemzeti összetartozás hídjára belépő (50.000,- forint)</li>
-                        <li>- 1 db síoktatásra szóló utalvány a Wax Klub síiskolába (65.000,-forint)</li>
-                        <li>- Hotel Narád (Mátraszentimre) félpanziós szállás 2 éjszaka 2 főre</li>
                       </ul>
                     </Disclosure.Panel>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
