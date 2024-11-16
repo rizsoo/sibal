@@ -507,7 +507,6 @@ const SibalWebsite = () => {
                 </a>
               ))}
             </div>
-            <p className="mt-6 text-center text-xs text-gray-600">Szeretne a támogatónk lenni? Írjon az info@skioutlet.hu -ra!</p>
           </section>
 
           <section id="arak" ref={sectionRefs.arak} className="mb-12 bg-white rounded-lg shadow-md p-6">
