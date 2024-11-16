@@ -651,7 +651,7 @@ const SibalWebsite = () => {
                 </div>
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
-                A regisztrációs határidó (november 15.) után a Schieszl Borház Kft. a számlát e-mailben küldi.
+              A regisztráció után a Schieszl Borház Kft. a számlát e-mailben küldi.
               </p>
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
