@@ -492,7 +492,7 @@ const SibalWebsite = () => {
                 { name: "Nagyvillám Visegrádi sípálya", url: "https://www.visegradsipalya.hu/", img: nagyvillam },
                 { name: "Zemplén Kalandpark", url: "https://www.zemplenkalandpark.hu/", img: zemplen },
                 { name: "Hotel Narád", url: "https://narad.accenthotels.com/hu", img: narad },
-                { name: "Wax Klub síiskolába", url: "https://waxklub.hu/", img: wax  },
+                { name: "Wax Klub", url: "https://waxklub.hu/", img: wax  },
                 { name: "ELEVEN Sportclub Egyesület", url: "https://elevenhungary.hu/", img: eleven }
               ].map((partner, index) => (
                 <a
