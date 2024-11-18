@@ -34,6 +34,7 @@ import wax from '../images/wax.png'
 import zemplen from '../images/zemplen.jpg'
 import narad from '../images/narad.png'
 import murau from '../images/murau.jpg'
+import kreischberg from '../images/kreischberg.svg'
 
 
 const SibalWebsite = () => {
@@ -478,6 +479,7 @@ const SibalWebsite = () => {
                 { name: "Síoktatók Magyarországi Szövetsége", url: "https://sioktatas.hu/", img: smsz },
                 { name: "Sípark Mátraszentistván", url: "https://sipark.hu/", img: sipark },
                 { name: "Murau Steiermark", url: "https://www.steiermark.com/de/Murau", img: murau },
+                { name: "Kreischberg Murau", url: "https://www.kreischberg.at/hu/", img: kreischberg },
                 { name: "Skioutlet.hu", url: "https://www.skioutlet.hu/", img: skioutlet },
                 { name: "PARKSNOW Donovaly", url: "https://www.parksnow.sk/teli/hu/park-snow-donovaly", img: parksnow },
                 { name: "Marosport /FUNDANGO", url: "https://www.fundango.hu/", img: fundango },
