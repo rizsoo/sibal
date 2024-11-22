@@ -387,7 +387,7 @@ const SibalWebsite = () => {
                     </Disclosure.Button>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                       <p>A bálbelépő ára 1 darab tombolaszelvényt/fő tartalmaz.</p>
-                      <p>A tombolán 8-10 nagy értékű nyereményt sorsolunk ki, összesen 1 millió forint értékben.</p>
+                      <p>A tombolán 14 darab nagy értékű nyereményt sorsolunk ki, összesen kb. 2 millió forint értékben!</p>
                     </Disclosure.Panel>
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500 mb-3">
                       <p className='font-bold mb-3'>Fődíj:</p>
