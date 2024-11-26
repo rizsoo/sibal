@@ -538,7 +538,7 @@ const SibalWebsite = () => {
             <div>
               <h2 className="text-2xl font-bold mb-4 text-[#327bab]">Regisztráció</h2>
               <p className="mt-4 text-xs text-gray-600 mb-2">Regisztrációs határidő: a létszámkapacitás beteltéig</p>
-              <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+              {/*<form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Név*</label>
@@ -653,7 +653,9 @@ const SibalWebsite = () => {
               </form>
               <p className="mt-4 text-center text-xs text-gray-600">
               A regisztráció után a Schieszl Borház Kft. a számlát e-mailben küldi.
-              </p>
+              </p>*/}
+              Utóregisztráció ügyében kérjük írjon az info@skioutlet.hu e-mail címre!
+              A számlákat a Schieszl Borház Kft. e-mailben küldi.
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
           </section>
