@@ -654,8 +654,8 @@ const SibalWebsite = () => {
               <p className="mt-4 text-center text-xs text-gray-600">
               A regisztráció után a Schieszl Borház Kft. a számlát e-mailben küldi.
               </p>*/}
-              Utóregisztráció ügyében kérjük írjon az info@skioutlet.hu e-mail címre!
-              A számlákat a Schieszl Borház Kft. e-mailben küldi.
+              A regisztráció lezárult.
+              Esetleges kérdéseivel a feher@skioutlet.hu e-mail írhatnak.
             </div>
             <img src={imageInside} className='rounded-lg' alt="Inside image" />
           </section>
