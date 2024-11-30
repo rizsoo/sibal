@@ -202,7 +202,9 @@ const SibalWebsite = () => {
                   <b>Dress code: </b>Smart casual
                 </p>
                 <p className="mb-2">
-                  <b>A síbál fővédnöke: </b>Szijjártó Péter külgazdasági és külügyminiszter, képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja el.
+                  <b>A síbál fővédnöke: </b>A síbál fővédnöke: Szijjártó Péter külgazdasági és külügyminiszter,
+képviseletét Gyurta Dániel miniszteri főtanácsadó, olimpiai bajnok látja
+el.
                 </p>
                 <p className="mb-2">
                   <b>Az est műsorvezetője: </b>Klausmann Viktor
