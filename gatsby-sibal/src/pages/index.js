@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
-import { Menu, X, MapPin, Wine, Clock, Music, Gift, Calendar, ParkingCircle, Music2, ListStart, DoorOpen, CheckCheck, Handshake, BookOpen, Microchip, VolumeIcon, Popcorn, GalleryHorizontal, Pizza, ChevronDown } from 'lucide-react'
+import { Menu, X, MapPin, Wine, Clock, Music, Gift, Calendar, ParkingCircle, Music2, ListStart, DoorOpen, CheckCheck, Handshake, BookOpen, Microchip, VolumeIcon, Popcorn, GalleryHorizontal, Pizza, ChevronDown, Link2Icon, TouchpadIcon } from 'lucide-react'
 import { Disclosure } from '@headlessui/react'
 import { useForm, ValidationError } from '@formspree/react';
 import { Helmet } from 'react-helmet';
@@ -35,6 +35,7 @@ import zemplen from '../images/zemplen.jpg'
 import narad from '../images/narad.png'
 import murau from '../images/murau.jpg'
 import kreischberg from '../images/kreischberg.svg'
+import { Link1Icon, LinkBreak1Icon } from '@radix-ui/react-icons';
 
 
 const SibalWebsite = () => {
@@ -183,6 +184,31 @@ const SibalWebsite = () => {
       <div className="max-w-[1000px] mx-auto">
         <main className="container mx-auto px-4 py-8">
 
+        <section id="sajtomegjelenesek" ref={sectionRefs.esemeny} className="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Sajtómegbeszámolók</h2>
+            <div className="flex flex-col sm:flex-row gap-6 justify-top mb-8">
+              <div>
+                <a className="mb-4" target="_blank" href='https://sieljitthon.hu/beszamolo-a-szezonnyito-sibalrol/'>
+              <h3 className="text-1xl underline font-semibold mb-4 text-[#5091cb]">
+                  Chernel István Sí és Turisztikai Klaszter beszámolója
+                </h3>
+                </a>
+                <a className="mb-4" target="_blank"  href='https://sielok.hu/rovat/hirek/cikk/sielok-unnepeltek-a-szezonkezdest-az-sibalon-ahol-mi-is-dijat-kaptunk/'>
+              <h3 className="text-1xl underline font-semibold mb-4 text-[#5091cb]">
+                  Sielok.hu beszámolója
+                </h3>
+                </a>
+                <p className="mb-4">
+                  Köszönjük mindenkinek aki eljött, találkozunk a sípályákon! Várjuk ezenfelül a kedves résztvevők képeit, videóit amennyiben megosztanák azokat velünk. További kérdésekért forduljanak hozzánk email-ben: feher@skioutlet.hu
+                </p>
+
+              </div>
+              <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
+                <img src={logo} alt="Síbál 2024 Logo" />
+              </div>
+            </div>
+          </section>
+
           <section id="esemeny" ref={sectionRefs.esemeny} className="mb-12 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Esemény</h2>
             <div className="flex flex-col sm:flex-row gap-6 justify-top mb-8">
@@ -217,7 +243,6 @@ el.
                 </p>
               </div>
               <div className="w-100 h-100 pl-4 pr-4 bg-white rounded-full flex items-baseline justify-center">
-                <img src={logo} alt="Síbál 2024 Logo" />
               </div>
             </div>
           </section>
