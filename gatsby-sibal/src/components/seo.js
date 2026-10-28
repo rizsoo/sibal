@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import socialImage from '../images/logo_sibal_2.png'
+import socialImage from '../images/sibal_header.jpg'
 
 export default function Seo({ title, description, pathname, noIndex = false, schema }) {
   const { site } = useStaticQuery(graphql`
@@ -28,7 +28,11 @@ export default function Seo({ title, description, pathname, noIndex = false, sch
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:alt" content="Síbál logó" />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="250" />
+      <meta property="og:image:alt" content="Síbál megosztási kép" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

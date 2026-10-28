@@ -76,7 +76,9 @@ az első logó kivétel. Az SVG-logó megmarad vektorosnak.
 
 Az oldalankénti Gatsby `Head` exportok a [SEO-komponensen](src/components/seo.js)
 keresztül állítják a magyar nyelvet, címet, leírást, canonical URL-t és megosztási
-metaadatokat. Az éles domain a [Gatsby-konfigurációban](gatsby-config.js) található;
+metaadatokat. A megosztási kép a [sibal_header.jpg](src/images/sibal_header.jpg),
+amelyet az Open Graph és Twitter image metaadatok is használnak.
+Az éles domain a [Gatsby-konfigurációban](gatsby-config.js) található;
 domainváltáskor a [robots.txt](static/robots.txt) és a 2024-es strukturált eseményadat
 URL-jét is frissíteni kell. A sitemap automatikusan készül. A 2026-os eseményhez
 csak a tényleges adatok megadása után adjunk strukturált Event-adatot.

@@ -175,7 +175,8 @@ test('production HTML includes metadata, language and only confirmed event data'
     expect(html).toContain(`<title data-gatsby-head="true">${title}</title>`)
     expect(html).toContain(`href="https://www.sibal.hu${path}"`)
     expect(html).toMatch(/name="description" content="[^"]+"/)
-    expect(html).toMatch(/property="og:image" content="https:\/\/www.sibal.hu\/static\/[^"]+\.png"/)
+    expect(html).toMatch(/property="og:image" content="https:\/\/www.sibal.hu\/static\/sibal_header-[^"]+\.jpg"/)
+    expect(html).toMatch(/name="twitter:image" content="https:\/\/www.sibal.hu\/static\/sibal_header-[^"]+\.jpg"/)
     expect(html).not.toContain('formspree')
   }
   const archive = await request.get(archivePath)
