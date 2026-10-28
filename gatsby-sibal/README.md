@@ -1,99 +1,116 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# Síbál
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Gatsby-alapú rendezvényoldal, React 18-cal és Tailwind CSS 3-mal.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Fejlesztés
 
-## 🚀 Quick start
+Node.js 24 LTS és npm 11 szükséges. A Node-verziót a [.nvmrc](.nvmrc),
+a telepíthető csomagverziókat a [package-lock.json](package-lock.json) rögzíti.
+Az egységes csomagkezelő npm; Yarn-lockfájlt ne generáljunk vagy használjunk.
 
-1.  **Create a Gatsby site.**
+```powershell
+Set-Location .\gatsby-sibal
+npm ci
+npm run develop
+```
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+A fejlesztői oldal: http://localhost:8000.
+Függőség- vagy Gatsby-konfigurációváltozás után indítsuk újra a fejlesztői szervert.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+A telepített függőségekkel a fejlesztői szerver `yarn develop` paranccsal is
+indítható. A `packageManager` mezőt szándékosan nem rögzítjük npm-re, mert
+a Yarn Classic ilyenkor a script futtatását is elutasítja. A függőségek
+telepítéséhez és frissítéséhez továbbra is npm-et használjunk.
 
-1.  **Start developing.**
+## Oldalak
 
-    Navigate into your new site’s directory and start it up.
+- `/`: a közelgő esemény 2026. november 28-án, 18:00–24:00, a mátraházai Lifestyle Hotel Mátra
+  szervezésében, a Sí Klaszter szakmai támogatásával. A meghívó alapján
+  vacsora, élőzene, DJ, táncos műsor és tombola várható.
+  Belépő: 29.000 Ft/fő, svédasztalos vacsorával és 6 órás korlátlan
+  alkoholmentes italcsomaggal; alkoholos italok külön fizetendők.
+  Szállás: 65.000 Ft/2 fő/1 éj, reggelivel, késői kijelentkezéssel 12:00-ig,
+  wellnesshasználattal 16:00-ig.
+- `/archivum/`: korábbi rendezvények listája.
+- `/archivum/2024/`: a 2024-es esemény eredeti adatai, lezárt regisztrációval.
+- `/404.html`: saját hibaoldal.
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+A főoldal „Korábbi Síbálok” része közvetlenül listázza az eseményeket,
+és azok részletes oldalára vezet; a menü is ehhez a főoldali listához görget.
+A korábbi `/archivum/` cím továbbra is elérhető a meglévő hivatkozásokhoz.
 
-1.  **Open the source code and start editing!**
+A 2026-os részleteket a [főoldalon](src/pages/index.js), a korábbi eseményt
+az [archív oldalon](src/pages/archivum/2024.js) lehet szerkeszteni.
+A 2026-os jelentkezés e-mailben történik november 13-ig:
+sales@lifestylehotelmatra.hu. Nincs űrlap vagy Formspree-integráció.
+A böngésző az alapértelmezett levelezőt nyitja meg; a honlap nem küld és nem tárol
+jelentkezési adatokat.
 
-    Your site is now running at `http://localhost:8000`!
+## Navigáció és akadálymentesség
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+A 2026-os oldal meghívóhoz illeszkedő fenyőzöld–arany–krém arculatot használ,
+helyi rendszerbetűkkel és Georgia címsorokkal. A `SiteLayout` `theme="alpine"`
+beállítása kapcsolja be a [globális CSS-ben](src/styles/global.css) elkülönített
+stílusokat; az archívum korábbi arculata változatlan. A meghívó asztali nézetben
+a jobb oldali 40%-os oszlopban, mobilon a szöveg alatt jelenik meg.
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+A [közös elrendezés](src/components/site-layout.js) valódi hash-hivatkozásokat
+használ. A fejléc mért magassága adja a görgetési eltolást. A menüpontokat a
+szekciók felső pozíciója alapján jelöli aktívnak, így a hosszú, kinyitott program
+esetén is működnek. Új szekció esetén adjunk hozzá egyedi `id`-t, `tabIndex={-1}`-et
+és megfelelő bejegyzést az oldal `navItems` listájához.
 
-## 🚀 Quick start (Netlify)
+A mobilmenü Escape-pel zárható, visszaadja a fókuszt a menügombnak, és szekcióra
+navigáláskor a célszekció kap fókuszt. A navigáció a hosszú archív menü miatt
+1280 px alatt összecsukható. A csökkentett mozgást kérő beállítás kikapcsolja
+a sima görgetést.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+## Képek és metaadatok
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+Az eredeti képek a [src/images](src/images) könyvtárban maradnak.
+A Gatsby Image és Sharp build közben készít reszponzív, WebP/AVIF és kompatibilis
+tartalék változatokat. A [képi komponens](src/components/optimized-image.js)
+a logókat legfeljebb 320 px, a fotókat legfeljebb 960 px szélességgel dolgozza fel.
+A képek méretaránya fenntartott, alapértelmezetten késleltetetten töltődnek;
+az első logó kivétel. Az SVG-logó megmarad vektorosnak.
 
-## 🧐 What's inside?
+Az oldalankénti Gatsby `Head` exportok a [SEO-komponensen](src/components/seo.js)
+keresztül állítják a magyar nyelvet, címet, leírást, canonical URL-t és megosztási
+metaadatokat. Az éles domain a [Gatsby-konfigurációban](gatsby-config.js) található;
+domainváltáskor a [robots.txt](static/robots.txt) és a 2024-es strukturált eseményadat
+URL-jét is frissíteni kell. A sitemap automatikusan készül. A 2026-os eseményhez
+csak a tényleges adatok megadása után adjunk strukturált Event-adatot.
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+## Production build és tesztek
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+```powershell
+npm run build
+npx playwright install chromium
+npm test
+```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+A tesztek a production buildet ellenőrzik. A Playwright automatikusan indít és
+leállít egy helyi szervert a http://127.0.0.1:9000 címen; tesztelés előtt újra kell
+buildelni a módosított forrást. Az ellenőrzések kiterjednek a lapokra, a
+jelentkezési linkre, a hash-navigációra, a böngészőelőzményekre, a hosszú program
+aktív menüpontjára, a mobilmenüre, a metaadatokra és a képek méretére/formátumára.
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Kézi production-előnézet:
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+```powershell
+npm run serve
+```
 
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+Kisebb memóriájú környezetben a build előtt beállítható:
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+```powershell
+$env:GATSBY_CPU_COUNT = "2"
+```
 
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+A [GitHub Actions workflow](../.github/workflows/validate.yml) tiszta npm-telepítést,
+production buildet és Chromium-teszteket futtat.
 
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-1.  **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+A lockfájlban a `msgpackr` kompatibilis 1.12-es változata szerepel: a régi
+1.7-es változat Node 24 alatt bufferhibával állította le a Gatsby buildjét.
+Az npm a Gatsby belső, kísérleti `react-server-dom-webpack` csomagjához peer
+dependency figyelmeztetést adhat; emiatt ne váltsunk kísérleti React-verzióra.
