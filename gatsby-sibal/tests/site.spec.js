@@ -71,7 +71,7 @@ test('2026 home page uses email registration without old event details', async (
 
 test('archive is linked both ways and preserves the 2024 event', async ({ page }) => {
   await page.goto('/')
-  const previousEvents = page.getByRole('complementary', { name: 'Korábbi események' })
+  const previousEvents = page.getByRole('complementary', { name: 'Korábbi Síbálok' })
   await expect(previousEvents.getByRole('listitem')).toHaveCount(1)
   await expect(previousEvents.locator('a[href="/archivum/"]')).toHaveCount(0)
   await previousEvents.getByRole('link', { name: 'Síbál 2024', exact: true }).click()

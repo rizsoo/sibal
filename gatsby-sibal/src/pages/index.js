@@ -108,8 +108,8 @@ export default function UpcomingEvent() {
         <p>Szeretettel várunk minden érdeklődőt egy hangulatos, síbarátokkal töltött estére!</p>
         <a className="event-button mt-6" href="mailto:sales@lifestylehotelmatra.hu">Jelentkezés e-mailben <span aria-hidden="true">↗</span></a>
       </section>
-      <aside id="korabbi-sibalok" tabIndex={-1} className="event-panel event-archive" aria-label="Korábbi események">
-        <h2 className="event-heading">Korábbi Síbálok</h2>
+      <aside id="korabbi-sibalok" tabIndex={-1} className="event-panel event-archive" aria-labelledby="korabbi-sibalok-heading">
+        <h2 id="korabbi-sibalok-heading" className="event-heading">Korábbi Síbálok</h2>
         <ul>
           <li>
             <Link to="/archivum/2024/" className="event-link">Síbál 2024</Link>
