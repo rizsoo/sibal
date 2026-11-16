@@ -1,3 +1,5 @@
+// The 2026 Síbál was cancelled. This page is kept outside src/pages so Gatsby
+// does not publish it. To restore it, move it back to src/pages/index.js.
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'

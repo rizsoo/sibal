@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import {
   MapPin,
   Wine,
@@ -39,9 +38,6 @@ const SibalWebsite = () => {
         aria-label="Archív esemény">
         <p className="font-semibold mb-2">Archív esemény – 2024</p>
         <p>A rendezvény lezajlott, az alábbiak a 2024-es esemény adatai.</p>
-        <Link to="/" className="underline text-[#327bab]">
-          A közelgő Síbál 2026 megtekintése
-        </Link>
       </aside>
 
       <section

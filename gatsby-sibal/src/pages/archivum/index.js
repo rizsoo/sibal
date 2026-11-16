@@ -5,7 +5,7 @@ import Seo from '../../components/seo'
 
 export default function Archive() {
   return (
-    <SiteLayout title="SÍBÁL – ARCHÍVUM" year={2026}>
+    <SiteLayout title="SÍBÁL – ARCHÍVUM" year={2024}>
       <section className="mb-12 bg-white rounded-lg shadow-md p-6">
         <h2 className="text-3xl font-bold mb-4 text-[#327bab]">Korábbi események</h2>
         <ul>

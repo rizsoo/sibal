@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import { Menu, X } from 'lucide-react'
 
 const pageLinks = [
-  { to: '/', label: 'Síbál 2026' },
-  { to: '/#korabbi-sibalok', label: 'Korábbi Síbálok' },
+  { to: '/', label: 'Síbál 2024' },
+  { to: '/archivum/', label: 'Korábbi Síbálok' },
 ]
 const emptyNavItems = []
 

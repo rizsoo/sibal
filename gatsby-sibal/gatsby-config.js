@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Síbál 2026`,
-    description: `Síbál 2026. november 28-án, 18:00–24:00 a mátraházai Lifestyle Hotel Mátrában. Belépő: 29.000 Ft/fő. Jelentkezés november 13-ig.`,
+    title: `Síbál 2024`,
+    description: `Síbál 2024. november 30., Schieszl Vendéglő és Borház Bortára, Budakalász.`,
     siteUrl: `https://www.sibal.hu`,
   },
   plugins: [
